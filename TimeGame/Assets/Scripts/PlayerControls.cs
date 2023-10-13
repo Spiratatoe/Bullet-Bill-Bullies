@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-
-
-    //jacks changes 
-
-    public static PlayerControls instance; //prevent duplicates 
-
     // Variables set in the inspector
     [SerializeField] private float mWalkSpeed;
     [SerializeField] private float mRunSpeed;
@@ -32,14 +26,6 @@ public class PlayerControls : MonoBehaviour
 
     private void Start()
     {
-        
-        //prevents dups
-        if(instance == null){//when the game starts 
-            instance = this; 
-        } else {
-            Destroy(gameObject); 
-        }
-
         // Get references to other components and game objects
         mAnimator = GetComponent<Animator>();
         mRigidBody2D = GetComponent<Rigidbody2D>();
