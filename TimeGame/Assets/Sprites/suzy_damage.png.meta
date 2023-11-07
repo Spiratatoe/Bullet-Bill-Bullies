@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 287b60d2ca4c8aa418fa0e958f5ce5e4
+guid: 45a656aa334d7d24a9b68517607e2e80
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -101,17 +101,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_damage_sheet_0
+      name: suzy_damage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5330d6f3bd92db24db04dcdade2af74f
-      internalID: 1215866814
+      spriteID: a44915d7428ee3e4abf878bc0b8ca1a0
+      internalID: -1364064076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_damage_sheet_1
+      name: suzy_damage_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70454e7d6f79eb42b18b8c11021dcfd
-      internalID: 560532204
+      spriteID: 457a399df1d6f5a4c8604ca32953c201
+      internalID: -1130875035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_damage_sheet_2
+      name: suzy_damage_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +185,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c30a05c1012f0334790240e68aafc196
-      internalID: 1470169495
+      spriteID: 3eec7c42d438bc64588094d9f0a136fb
+      internalID: 84846356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_damage_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ea4c2ffeb798d4584a4abb2d0603e9
+      internalID: 1567428216
       vertices: []
       indices: 
       edges: []
@@ -178,9 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character_damage_sheet_0: 1215866814
-      character_damage_sheet_1: 560532204
-      character_damage_sheet_2: 1470169495
+      suzy_damage_0: -1364064076
+      suzy_damage_1: -1130875035
+      suzy_damage_2: 84846356
+      suzy_damage_3: 1567428216
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

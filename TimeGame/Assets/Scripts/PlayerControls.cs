@@ -5,11 +5,16 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     // Variables set in the inspector
+    [Header("Stats")]
     [SerializeField] private float mWalkSpeed;
     [SerializeField] private float mRunSpeed;
     [SerializeField] private float mJumpForce;
+    [SerializeField] int hp, maxHP = 5;
+
+    [Header("Game components")]
     [SerializeField] private LayerMask mWhatIsGround;
     [SerializeField] private Transform mGroundCheck;
+    [SerializeField] private Transform forkPoint;
     private float kGroundCheckRadius = 0.1f;
     [Range(0, .3f)] [SerializeField] private float mMovementSmoothing = .05f;
     private Vector3 mVelocity = Vector3.zero; //target for smoothings
@@ -19,6 +24,8 @@ public class PlayerControls : MonoBehaviour
     private bool mMoving;
     private bool mGrounded;
     private bool mFalling;
+    private bool mAttacking;
+    private bool mTakingDamage;
 
     // References to Player's components
     private Animator mAnimator;
@@ -29,6 +36,7 @@ public class PlayerControls : MonoBehaviour
     private bool justJumped = false;
 
     //Dashing variables
+    [Header("Dashing Settings")]
     private bool canDash = true;
     private bool isDashing;
     [SerializeField] private float mDashForce;
@@ -41,6 +49,8 @@ public class PlayerControls : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
+
+        hp = maxHP;
     }
 
     private void Update()
@@ -51,19 +61,42 @@ public class PlayerControls : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
         mMoving = !Mathf.Approximately(horizontal, 0f);
-        mAnimator.SetBool("isMoving", mMoving);
         
+
+        if (mMoving)
+        {
+            gameObject.transform.SetParent(null);
+        }
+
+
         UpdateGrounded();
+
         //JUMP
         if (mGrounded && Input.GetButtonDown("Jump")){
                 justJumped = true;
+                mAnimator.SetBool("isJumping", true);
         }
-            
+        
+        // Run is [Left Shift]
+        mRunning = Input.GetButton("Run");
+
+        mAnimator.SetBool("isRunning", mRunning);
+        mAnimator.SetBool("isMoving", mMoving);
+
+        if (!mTakingDamage && Input.GetButtonDown("Attack") && !mAttacking)
+        {
+            mAttacking = true;
+            mAnimator.SetBool("isAttacking", mAttacking);
+            StartCoroutine(Attack());
+        }
+
+
         if (Input.GetButtonDown("Dash") && canDash)
         {
             StartCoroutine(Dash());
         }
         
+
     }
     
     private void FixedUpdate()
@@ -74,29 +107,23 @@ public class PlayerControls : MonoBehaviour
         
         MoveCharacter();
 
-        //jump
-        if (justJumped){
-            justJumped = false;
-            rb.AddForce(new Vector2(rb.velocity.x, mJumpForce*10f));//rb.velocity = new Vector2(rb.velocity.x, mJumpForce);
-        }
-        
     }
 
 
     private bool UpdateGrounded()
     {
         mGrounded = Physics2D.OverlapCircle(mGroundCheck.position, kGroundCheckRadius, mWhatIsGround);
+        mAnimator.SetBool("isJumping", !mGrounded);
         return mGrounded;
     }
 
     private void MoveCharacter()
     {
-        // Run is [Left Shift]
-        mRunning = Input.GetButton("Run");
 
         if (mMoving){
+            
             //No smoothing:
-            //rb.velocity = new Vector2(horizontal* (mRunning ? mRunSpeed : mWalkSpeed) * 10f * Time.fixedDeltaTime, rb.velocity.y);
+            //rb.velocity = new Vector2(horizontal* (mRunning ? mRunSpeed : mWalkSpeed) * 10f * Time.fixedDeltaTime, rb.velocity.y)
 
             //Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(horizontal* (mRunning ? mRunSpeed : mWalkSpeed) * 10f * Time.fixedDeltaTime, rb.velocity.y);
@@ -105,15 +132,49 @@ public class PlayerControls : MonoBehaviour
 
             FaceDirection(horizontal < 0f ? Vector2.left : Vector2.right);
         }
-        
-    }
 
+        //jump
+        if (justJumped)
+        {
+            justJumped = false;
+            rb.AddForce(new Vector2(rb.velocity.x, mJumpForce * 10f));//rb.velocity = new Vector2(rb.velocity.x, mJumpForce);
+
+        }
+
+    }
 
     private void FaceDirection(Vector2 direction)
     {
         // Flip the sprite
         mSpriteRenderer.flipX = direction == Vector2.right ? false : true;
+        
         facingRight = direction == Vector2.right ? true : false;
+
+        //Flip the direction of where the weapon collider is
+        if (!facingRight && (forkPoint.localPosition.x > 0))
+        {
+            forkPoint.localPosition = new Vector2(forkPoint.localPosition.x * -1, transform.localPosition.y);
+        }
+        else if (facingRight && (forkPoint.localPosition.x < 0))
+        {
+            forkPoint.localPosition = new Vector2(forkPoint.localPosition.x * -1, transform.localPosition.y);
+        }
+    }
+
+
+    public void TakeDamage(int damage)
+    {
+        if (mAttacking && mTakingDamage) return; //cant take damage while hitting or if just took
+        mTakingDamage = true;
+        hp -= damage;
+        mAnimator.SetBool("isTakingDamage", mTakingDamage);
+
+        StartCoroutine(TookDamage());
+        if (hp <= 0)
+        {
+            Debug.Log("You would have died");
+        }
+
     }
 
     private IEnumerator Dash()
@@ -141,5 +202,16 @@ public class PlayerControls : MonoBehaviour
         canDash = true;
     }
 
-    
+    private IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(1f);
+        mAttacking = false;
+        mAnimator.SetBool("isAttacking", mAttacking);
+    }
+    private IEnumerator TookDamage()
+    {
+        yield return new WaitForSeconds(1f);
+        mTakingDamage = false;
+        mAnimator.SetBool("isTakingDamage", false);
+    }
 }

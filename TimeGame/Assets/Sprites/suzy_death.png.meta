@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00cc0571b8897a14d9281fd472f68f3e
+guid: 65da1f9b6f2ee7c40a2423e0e84a5d86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,17 +101,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_running_sheet_0
+      name: suzy_death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775e8c73fb9b132468565bf160bf52bd
-      internalID: 564919996
+      spriteID: c3262e51a37fed343be040f89b86a8d5
+      internalID: -967080560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_running_sheet_1
+      name: suzy_death_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,41 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48eb197cb8728648821843a9fcf6ba8
-      internalID: -253262422
+      spriteID: c794bdb908eeac343b922a8a78f2a889
+      internalID: -2140417244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_running_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29001c2e5dc92f14ab215df99941ae75
-      internalID: 726062316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_running_sheet_3
+      name: suzy_death_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc56b7332896fab4282377849c24af43
-      internalID: 1791518525
+      spriteID: 2788dd16c3cdd19468ec382084bc9a55
+      internalID: 1308555472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_running_sheet_4
+      name: suzy_death_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b61d9a089e377b242b39cc7298d58969
-      internalID: -1288811963
+      spriteID: a0b66ec497005074fa38a9b144d44940
+      internalID: -1305744876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_running_sheet_5
+      name: suzy_death_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +227,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 589e83114479de246838b6f34ba01355
-      internalID: -1169097553
+      spriteID: 426a7a966b952cd4c953e11b889ccc96
+      internalID: 349189542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_death_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d9fa9fa659c9a4487fe3dc7ae1b37a
+      internalID: -455254269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_death_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1b17f8943733247a628eed6f569831
+      internalID: -703062817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_death_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b4b775fea4a5a4ab020fa0900c4d23
+      internalID: 145970666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_death_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460cd5193b7dbd94583da99079777da9
+      internalID: -820913167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suzy_death_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963288875c95e0d41aef8fb1f5088806
+      internalID: 1959505250
       vertices: []
       indices: 
       edges: []
@@ -241,12 +349,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character_running_sheet_0: 564919996
-      character_running_sheet_1: -253262422
-      character_running_sheet_2: 726062316
-      character_running_sheet_3: 1791518525
-      character_running_sheet_4: -1288811963
-      character_running_sheet_5: -1169097553
+      suzy_death_0: -967080560
+      suzy_death_1: -2140417244
+      suzy_death_2: 1308555472
+      suzy_death_3: -1305744876
+      suzy_death_4: 349189542
+      suzy_death_5: -455254269
+      suzy_death_6: -703062817
+      suzy_death_7: 145970666
+      suzy_death_8: -820913167
+      suzy_death_9: 1959505250
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
