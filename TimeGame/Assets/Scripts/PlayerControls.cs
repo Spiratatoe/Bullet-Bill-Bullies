@@ -137,7 +137,7 @@ public class PlayerControls : MonoBehaviour
         if (justJumped)
         {
             justJumped = false;
-            rb.AddForce(new Vector2(rb.velocity.x, mJumpForce * 10f));//rb.velocity = new Vector2(rb.velocity.x, mJumpForce);
+            rb.AddForce(new Vector2(rb.velocity.x, mJumpForce * 11f));//rb.velocity = new Vector2(rb.velocity.x, mJumpForce);
 
         }
 
