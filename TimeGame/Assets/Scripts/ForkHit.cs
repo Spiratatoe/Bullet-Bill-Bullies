@@ -5,9 +5,9 @@ using UnityEngine;
 public class ForkHit : MonoBehaviour
 {
 	// Start is called before the first frame update
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.CompareTag("Enemy"))
+		if (collision.tag == "Enemy")
 		{
 			Enemy enemyComponent = collision.gameObject.GetComponent<Enemy>();
 			enemyComponent.TakeDamage((int)1);

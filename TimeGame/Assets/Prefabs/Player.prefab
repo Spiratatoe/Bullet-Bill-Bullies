@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7237488647035671429}
   - component: {fileID: 8776213182915632962}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: ForkPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

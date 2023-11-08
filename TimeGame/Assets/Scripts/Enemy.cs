@@ -52,9 +52,9 @@ public class Enemy : MonoBehaviour
     }
 
     //do damage to the player if you touch them
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             Debug.Log(collision.gameObject.name);
             PlayerControls playerComponent = collision.gameObject.GetComponent<PlayerControls>();
