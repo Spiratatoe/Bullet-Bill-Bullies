@@ -169,7 +169,7 @@ public class PlayerControls : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (mAttacking && mTakingDamage) return; //cant take damage while hitting or if just took
+        if (mAttacking || mTakingDamage || isDashing) return; //cant take damage while hitting or if just took or if dashing
         mTakingDamage = true;
         hp -= damage;
         healthText.text = "" + hp;

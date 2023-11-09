@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rb;
     [SerializeField] int hp, maxHP = 3;
-
 
     //movement like platforms
     [SerializeField] private float speed=2;
     [SerializeField] private Transform[] points; //array of transform points where the platform travels to
     private int i;//index  of points array
 
+    //Animation Variables
+    private Animator mAnimator;
+    private SpriteRenderer mSpriteRenderer;
+    private bool mDying = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        hp = maxHP;
+        mAnimator = GetComponent<Animator>();
+        mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
         
+        hp = maxHP;
         i = 0;
 
     }
@@ -35,9 +40,17 @@ public class Enemy : MonoBehaviour
                 i = 0;
             }
         }
-        if (!TimeStop.timeStopped)
+        if (!TimeStop.timeStopped && !mDying)
         {
+            float movingTo = (transform.position.x - points[i].position.x);
+            mSpriteRenderer.flipX = (movingTo < 0)? false: true;
             transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        }
+        if (TimeStop.timeStopped){
+            mAnimator.SetBool("isTimeStopped", true);
+        }
+        if (!TimeStop.timeStopped){
+            mAnimator.SetBool("isTimeStopped", false);
         }
     }
 
@@ -45,10 +58,24 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         hp -= damage;
-        if (hp <= 0)
+        mAnimator.SetBool("isTakingDamage", true);
+        StartCoroutine(TookDamage());
+    }
+
+    private IEnumerator TookDamage()
+    {
+        
+        if (hp > 0) //check if hase died
         {
-            Destroy(gameObject);
+            yield return new WaitForSeconds(1f);
+            mAnimator.SetBool("isTakingDamage", false);
         }
+        else{ 
+            mAnimator.SetBool("isDying", true);
+            mDying = true;
+            yield return new WaitForSeconds(1f);
+            Destroy(gameObject);
+        } 
     }
 
     //do damage to the player if you touch them
