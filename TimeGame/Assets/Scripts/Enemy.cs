@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private Animator mAnimator;
     private SpriteRenderer mSpriteRenderer;
     private bool mDying = false;
+    private bool mWalking = true;
 
 
     // Start is called before the first frame update
@@ -22,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
         mAnimator = GetComponent<Animator>();
         mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
-        
+        mWalking = true;
         hp = maxHP;
         i = 0;
 
@@ -38,20 +39,25 @@ public class Enemy : MonoBehaviour
             if (i == points.Length)
             {
                 i = 0;
+                StartCoroutine(StandStill());
             }
         }
-        if (!TimeStop.timeStopped && !mDying)
+        if (mWalking && !TimeStop.timeStopped && !mDying)
         {
             float movingTo = (transform.position.x - points[i].position.x);
             mSpriteRenderer.flipX = (movingTo < 0)? false: true;
             transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
-        if (TimeStop.timeStopped){
-            mAnimator.SetBool("isTimeStopped", true);
-        }
-        if (!TimeStop.timeStopped){
-            mAnimator.SetBool("isTimeStopped", false);
-        }
+
+        mAnimator.SetBool("isWalking", mWalking);
+        mAnimator.SetBool("isTimeStopped", TimeStop.timeStopped);
+
+    }
+    private IEnumerator StandStill()
+    {
+        mWalking = false;
+        yield return new WaitForSeconds(2f);
+        mWalking = true;
     }
 
 
@@ -67,7 +73,7 @@ public class Enemy : MonoBehaviour
         
         if (hp > 0) //check if hase died
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(11f);
             mAnimator.SetBool("isTakingDamage", false);
         }
         else{ 
