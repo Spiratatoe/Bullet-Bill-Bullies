@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private LayerMask mWhatIsGround;
     [SerializeField] private Transform mGroundCheck;
     [SerializeField] private Transform forkPoint;
+    [SerializeField] private TextMeshProUGUI healthText;
     private float kGroundCheckRadius = 0.1f;
     [Range(0, .3f)] [SerializeField] private float mMovementSmoothing = .05f;
     private Vector3 mVelocity = Vector3.zero; //target for smoothings
@@ -51,6 +53,8 @@ public class PlayerControls : MonoBehaviour
         mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
 
         hp = maxHP;
+
+        healthText.text = ""+ hp;
     }
 
     private void Update()
@@ -85,6 +89,7 @@ public class PlayerControls : MonoBehaviour
 
         if (!mTakingDamage && Input.GetButtonDown("Attack") && !mAttacking)
         {
+            if (mAttacking && mTakingDamage) return;
             mAttacking = true;
             mAnimator.SetBool("isAttacking", mAttacking);
             StartCoroutine(Attack());
@@ -167,6 +172,7 @@ public class PlayerControls : MonoBehaviour
         if (mAttacking && mTakingDamage) return; //cant take damage while hitting or if just took
         mTakingDamage = true;
         hp -= damage;
+        healthText.text = "" + hp;
         mAnimator.SetBool("isTakingDamage", mTakingDamage);
 
         StartCoroutine(TookDamage());
@@ -213,5 +219,13 @@ public class PlayerControls : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mTakingDamage = false;
         mAnimator.SetBool("isTakingDamage", false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(forkPoint.position, new Vector3(0.59f,0.59f,0f));
+
+
     }
 }

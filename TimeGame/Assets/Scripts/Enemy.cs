@@ -56,9 +56,16 @@ public class Enemy : MonoBehaviour
 	{
         if (collision.tag == "Player")
         {
-            Debug.Log(collision.gameObject.name);
             PlayerControls playerComponent = collision.gameObject.GetComponent<PlayerControls>();
             playerComponent.TakeDamage((int)1);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(points[0].position, 0.2f);
+        Gizmos.DrawWireSphere(points[1].position, 0.2f);
+        Gizmos.DrawLine(points[0].position, points[1].position);
     }
 }

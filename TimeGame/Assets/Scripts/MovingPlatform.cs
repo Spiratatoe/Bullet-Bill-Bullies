@@ -54,4 +54,14 @@ public class MovingPlatform : MonoBehaviour
 		}
 	}
 
+
+	private void OnDrawGizmos()
+	{
+		for (int i =0; i<points.Length-1; i++)
+        {
+			Gizmos.DrawWireSphere(points[i].position, 0.2f);
+			Gizmos.DrawLine(points[i].position, points[i+1].position);
+		}
+		Gizmos.DrawWireSphere(points[points.Length-1].position, 0.2f);
+	}
 }
