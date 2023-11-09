@@ -96,7 +96,7 @@ public class PlayerControls : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Dash") && canDash)
+        if (Input.GetButtonDown("Dash") && canDash && !mTakingDamage)
         {
             StartCoroutine(Dash());
         }
@@ -189,7 +189,7 @@ public class PlayerControls : MonoBehaviour
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-
+        mAnimator.SetBool("isDashing", true);
         //TO PLAY WITH reset y speed
         // rb.velocity = new Vector2(rb.velocity.x, 0f);
 
@@ -199,8 +199,8 @@ public class PlayerControls : MonoBehaviour
         //TODO anim
         yield return new WaitForSeconds(mDashTime);
         rb.gravityScale = originalGravity;
-        isDashing = false;   
-
+        isDashing = false;
+        mAnimator.SetBool("isDashing", false);
         //TO PLAY WITH reset 
         rb.velocity = new Vector2(0f, 0f);
 
