@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
         
         if (hp > 0) //check if hase died
         {
-            yield return new WaitForSeconds(11f);
+            yield return new WaitForSeconds(1f);
             mAnimator.SetBool("isTakingDamage", false);
         }
         else{ 
