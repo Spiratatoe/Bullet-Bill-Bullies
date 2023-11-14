@@ -16,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private LayerMask mWhatIsGround;
     [SerializeField] private Transform mGroundCheck;
     [SerializeField] private Transform forkPoint;
+
     [SerializeField] private TextMeshProUGUI healthText;
     private float kGroundCheckRadius = 0.1f;
     [Range(0, .3f)] [SerializeField] private float mMovementSmoothing = .05f;
@@ -150,19 +151,23 @@ public class PlayerControls : MonoBehaviour
 
     private void FaceDirection(Vector2 direction)
     {
-        // Flip the sprite
-        mSpriteRenderer.flipX = direction == Vector2.right ? false : true;
-        
+        // Flip the sprite not needed  because flipping player
+        //mSpriteRenderer.flipX = direction == Vector2.right ? false : true;
+
         facingRight = direction == Vector2.right ? true : false;
 
-        //Flip the direction of where the weapon collider is
-        if (!facingRight && (forkPoint.localPosition.x > 0))
+        Vector3 localScale = transform.localScale;
+
+        //Flip the player
+        if (!facingRight && localScale.x >= 0)
         {
-            forkPoint.localPosition = new Vector2(forkPoint.localPosition.x * -1, transform.localPosition.y);
+            localScale.x *= -1;
+            transform.localScale = localScale;
         }
-        else if (facingRight && (forkPoint.localPosition.x < 0))
+        if (facingRight && localScale.x <= 0)
         {
-            forkPoint.localPosition = new Vector2(forkPoint.localPosition.x * -1, transform.localPosition.y);
+            localScale.x *= -1;
+            transform.localScale = localScale;
         }
     }
 
@@ -224,7 +229,7 @@ public class PlayerControls : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(forkPoint.position, new Vector3(0.59f,0.59f,0f));
+        Gizmos.DrawWireCube(forkPoint.position + new Vector3(-0.2f, 0.045f, 0f), new Vector3(0.59f,0.59f,0f));
 
 
     }

@@ -8,10 +8,6 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] public Animator sceneTransition;
     [SerializeField] private float transitionTime = 1;
     // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
     public void LoadNextLevel()
     {

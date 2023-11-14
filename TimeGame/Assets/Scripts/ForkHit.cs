@@ -9,8 +9,8 @@ public class ForkHit : MonoBehaviour
 	{
 		if (collision.tag == "Enemy")
 		{
-			Enemy enemyComponent = collision.gameObject.GetComponent<Enemy>();
-			enemyComponent.TakeDamage((int)1);
+			EnemyHP enemyHPComponent = collision.gameObject.GetComponent<EnemyHP>();
+			enemyHPComponent.TakeDamage((int)1);
 		}
 	}
 }

@@ -8,7 +8,7 @@ public class BossHp : MonoBehaviour
 
     //movement like platforms
     [SerializeField] private float speed=2;
-    [SerializeField] private Transform[] points; //array of transform points where the platform travels to
+    //[SerializeField] private Transform[] points; //array of transform points where the platform travels to
     private int i;//index  of points array
 
     //Animation Variables
@@ -94,11 +94,11 @@ public class BossHp : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(points[0].position, 0.2f);
-        Gizmos.DrawWireSphere(points[1].position, 0.2f);
-        Gizmos.DrawLine(points[0].position, points[1].position);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(points[0].position, 0.2f);
+    //    Gizmos.DrawWireSphere(points[1].position, 0.2f);
+    //    Gizmos.DrawLine(points[0].position, points[1].position);
+    //}
 }
