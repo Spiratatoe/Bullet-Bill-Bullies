@@ -60,6 +60,15 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
+        //freezer the player if dialogue is happening
+        if (TryGetComponent<DialogueManager>(out DialogueManager manager) )
+        {
+            if (DialogueManager.GetInstance().playing)
+            {
+                return;
+            }
+        }
+            
         if (isDashing){
             return;
         }
@@ -107,6 +116,14 @@ public class PlayerControls : MonoBehaviour
     
     private void FixedUpdate()
     {
+        //freezer the player if dialogue is happening
+        if (TryGetComponent<DialogueManager>(out DialogueManager manager))
+        {
+            if (DialogueManager.GetInstance().playing)
+            {
+                return;
+            }
+        }
         if (isDashing){
             return;
         }
