@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 
+using UnityEngine.UI;
+
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
@@ -12,15 +14,21 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private GameObject speakerPortrait;
     [SerializeField] private Animator speakerPortraitAnimator;
+    [SerializeField] private GameObject portraitFrame;
+    [SerializeField] private GameObject speakerFrame;
+
 
     private Story currentStory;
     public bool playing { get; private set; }
     public bool done { get; private set; }
-    //dialogue keys
+    // dialogue keys
     private const string SPEAKER = "speaker";
-
     private static DialogueManager instance;
 
+    // character colours
+    Color32 suzy_colour;
+    Color32 cat_colour;
+    Color32 description_colour;
     private void Awake()
     {
         if (instance != null)
@@ -34,11 +42,17 @@ public class DialogueManager : MonoBehaviour
     {
         return instance;
     }
+
     private void Start()
     {
         playing = false;
         done = false;
         dialoguePanel.SetActive(false);
+
+        // setting colours
+        suzy_colour = new Color32(69,190,141,255); // RGBA
+        cat_colour = new Color32(255,173,0,255); // RGBA
+        description_colour = new Color32(255,255,255,255); // RGBA
     }
 
     private void Update()
@@ -104,9 +118,28 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER:
-                    speakerNameText.text = tagValue;
-                    speakerPortrait.SetActive(true);
-                    speakerPortraitAnimator.Play(tagValue);
+                    if ((tagValue) == "Cat" || (tagValue) == "Suzy") { 
+                        speakerNameText.text = tagValue;
+                        portraitFrame.SetActive(true);
+                        speakerFrame.SetActive(true);
+                        speakerPortrait.SetActive(true);
+                        speakerPortraitAnimator.Play(tagValue);
+
+                        if ((tagValue) == "Cat") {
+                            dialogeText.color = cat_colour;
+                            speakerNameText.color = cat_colour;  
+                        }
+                        else {
+                            dialogeText.color = suzy_colour; 
+                            speakerNameText.color = suzy_colour;    
+                        }
+                    }
+
+                    if ((tagValue) == "Description") { 
+                        portraitFrame.SetActive(false);
+                        speakerFrame.SetActive(false);
+                        dialogeText.color = description_colour; 
+                    }
                     break;
                 default:
                     Debug.LogWarning("Tag detected but not handled" + tag);

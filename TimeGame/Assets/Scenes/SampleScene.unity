@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &919004217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f093a38b3ccdae14e8efaac7f2a6da32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueInkJSON: {fileID: 4900000, guid: 4c1c964f381a0044895b53a0bbe99585, type: 3}
+  dialogueInkJSON: {fileID: 4900000, guid: bb0bd91c84a4648d181464773da1dcca, type: 3}
 --- !u!4 &919004218
 Transform:
   m_ObjectHideFlags: 0
@@ -14212,6 +14212,8 @@ MonoBehaviour:
   speakerNameText: {fileID: 1026462256}
   speakerPortrait: {fileID: 1608777725}
   speakerPortraitAnimator: {fileID: 164352852750990568}
+  portraitFrame: {fileID: 2019828398}
+  speakerFrame: {fileID: 1490727409}
 --- !u!4 &1094816026
 Transform:
   m_ObjectHideFlags: 0
@@ -14499,6 +14501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+--- !u!1 &1490727409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3036057917246016083, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+  m_PrefabInstance: {fileID: 164352852750990565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1588357062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27831,6 +27838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+--- !u!1 &2019828398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8285364313402034063, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+  m_PrefabInstance: {fileID: 164352852750990565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2043155118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2721947364545291388, guid: c34e65716232af44182c280b76f270b6, type: 3}
@@ -27948,6 +27960,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7303072184865017714, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303072184865017714, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971238692331282117, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11f9acbef4dcb4b97b541d83c5b43043, type: 3}
     - target: {fileID: 7988209210316155540, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -31.888916
