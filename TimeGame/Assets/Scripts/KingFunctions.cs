@@ -22,7 +22,7 @@ public class KingFunctions : MonoBehaviour
     void Start()
     {
         mAnimator = GetComponent<Animator>();
-        startTime = Time.time;
+        startTime = Time.time - 3.0f;
         initialTime = Time.time;
         nbForks = 0;
     }
@@ -30,15 +30,15 @@ public class KingFunctions : MonoBehaviour
     private void Update()
     {
         timeElapsed = Time.time - startTime;
-        if(timeElapsed >= 8.0f)
+        if(timeElapsed >= 3.0f)
         {
-            startTime += 8.0f;
+            startTime += 3.0f;
             toAttack += 1;
             mAnimator.SetFloat("TimedAttack", toAttack );
         }
 
         initialElapsed = Time.time - initialTime;
-        if (initialElapsed >= 33.0f)
+        if (initialElapsed >= 25.0f)
         {
             mAnimator.SetFloat("RAGE", 1 );
         }
@@ -62,18 +62,20 @@ public class KingFunctions : MonoBehaviour
     }
     
     //make a fork on right side first 
-    public void spawnFork()
+    public void spawnForkLeft()
     {
-        if (nbForks == 0)
-        {
+
             Instantiate(forkR, new Vector3(-3.85f,-2.57f,0f), Quaternion.identity);
-            nbForks += 1;
-        }
-        else if (nbForks == 1)
-        {
+            mAnimator.SetBool("ForkLeft", true);
+        
+        
+    }
+    public void spawnForkRight()
+    {
+        
             Instantiate(forkL, new Vector3(3.14f,-2.57f,0f), Quaternion.identity);
-            nbForks += 1;
-        }
+            mAnimator.SetBool("ForkRight", true);
+  
     }
 
     IEnumerator fork()

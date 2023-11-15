@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ChickenBehaviour : MonoBehaviour
 {
-    private float speed = 0.015f;
+    private float speed = 0.02f;
 
     // Update is called once per frame
     void Update()

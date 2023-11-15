@@ -78,8 +78,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.51666665
-    functionName: spawnFork
+  - time: 0.36666667
+    functionName: spawnForkLeft
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
