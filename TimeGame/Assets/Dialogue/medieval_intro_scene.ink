@@ -1,7 +1,6 @@
 ->medival_intro_scene
 === medival_intro_scene ===
 WOAH ! Where am I ? #speaker:Suzy
-TESTING HEYYY #speaker:Description
 (telepathically) Why did you follow me ! #speaker:Cat
 HUH ! Are you in my head ? #speaker:Suzy
 Don't you know not to follow strange cats. #speaker:Cat
