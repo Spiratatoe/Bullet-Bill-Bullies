@@ -1053,3 +1053,39 @@ Received Import Request.
   path: Assets/Prefabs/GameUI.prefab
   artifactKey: Guid(e15629b0f52cc524c99fb9bc2bb85e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/GameUI.prefab using Guid(e15629b0f52cc524c99fb9bc2bb85e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d890082aa67359d7ceea5f3462b99ce') in 0.064520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 89.567747 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63efbdae3ca6360f7ded4f6d5a1eed1') in 0.002462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 765.731152 seconds.
+  path: Assets/Sprites/Medeival/king_statue_with_fork.png
+  artifactKey: Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Medeival/king_statue_with_fork.png using Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00eb017d00acbe63e061b34599a47549') in 0.083242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.857979 seconds.
+  path: Assets/Sprites/Medeival/king_statue_without_fork.png
+  artifactKey: Guid(25131f218bf714ff9b9b028312c50073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Medeival/king_statue_without_fork.png using Guid(25131f218bf714ff9b9b028312c50073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e012ae82342ab720dbf674b111e65a') in 0.006898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.758366 seconds.
+  path: Assets/Sprites/Medeival/king_statue_with_fork.png
+  artifactKey: Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Medeival/king_statue_with_fork.png using Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc1ac864619fe19261253c4401cf6b1') in 0.006829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.420587 seconds.
+  path: Assets/Sprites/Medeival/king_statue_no_fork.png
+  artifactKey: Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Medeival/king_statue_no_fork.png using Guid(6d1ccbca520914d088c30b29d69f1a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda3b214bb6b9e772c744298907374b2') in 0.009923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.388155 seconds.
+  path: Assets/Sprites/Medeival/king_statue_fork.png
+  artifactKey: Guid(25131f218bf714ff9b9b028312c50073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Medeival/king_statue_fork.png using Guid(25131f218bf714ff9b9b028312c50073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19279c15fa383593c3d0e61a25872ebf') in 0.007724 seconds 
