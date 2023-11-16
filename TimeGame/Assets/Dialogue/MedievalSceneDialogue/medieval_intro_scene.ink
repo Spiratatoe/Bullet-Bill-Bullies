@@ -16,6 +16,7 @@ It is, therefore it's immensly important for us to get the chrono-crystals. You 
 What powers ? #speaker:Suzy
 As a time being, I am able to freeze time and also blip through space. I will lend these to you. PRESS "E" to pause time and PRESS "SHIFT" to blip through time.  #speaker:Cat
 And where will I find the crystals ?  #speaker:Suzy
+It seems, we've teleported to Medieval times ... #speaker:Cat
 I can sense the first one being in that castle. We'll begin searching there.  #speaker:Cat
 Jeez, I'm gonna be tired for school tomorrow.  #speaker:Suzy
 ->END
