@@ -363,3 +363,21 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 490.039026 seconds.
+  path: Assets/Boss.cs
+  artifactKey: Guid(6a0a3dce9032f4749906749b982e18b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Boss.cs using Guid(6a0a3dce9032f4749906749b982e18b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2fbce708821749b92b56fe54baf34fe') in 0.120720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.981563 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c9441a7e5e275ed81b6c11869f8203') in 0.002456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.941722 seconds.
+  path: Assets/Scenes/MedievalLevel.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MedievalLevel.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5003bce5ec54b238e609edbd3c093d') in 0.001673 seconds 
