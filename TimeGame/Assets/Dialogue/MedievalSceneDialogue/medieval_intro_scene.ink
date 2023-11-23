@@ -9,7 +9,7 @@ Wait ? what ? powers ? You made that portal thing ? #speaker:Suzy
 If you must know, I am a guardian of time, travelling through space and time to maintain the balance of the universe. But now, teleporting two people has weakened by powers and I can no longer time travel. #speaker:Cat
 Wait ... So I'm stuck here ! I have school tomorrow you need to get be back ASAP !  #speaker:Suzy
 It's not that simple, time is on a loop. The only way forward is backward in time. And now that you've drained by powers, I can't create portals. The only way to regenerate my powers is using the chrono-crystals.  #speaker:Cat
-Chrono-crystals ?  #speaker:Cat
+Chrono-crystals ?  #speaker:Suzy
 Yes, ancient stones of time and space itself, scattered through time and space. They will regenerate my powers and allow me to bring you home. However, I may be too weak to collect them on my own. You will have to do it. #speaker:Cat
 And this is the only way home ? #speaker:Suzy
 It is, therefore it's immensly important for us to get the chrono-crystals. You can use my powers, they will be crucial for collecting the chrono-crystals and helping you through the time periods.  #speaker:Cat
