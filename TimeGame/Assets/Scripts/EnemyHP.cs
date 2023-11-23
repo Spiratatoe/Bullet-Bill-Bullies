@@ -7,6 +7,8 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] int hp, maxHP = 3;
     private Animator mAnimator;
     private bool mDying = false;
+
+    public GameObject bottlePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class EnemyHP : MonoBehaviour
             mAnimator.SetBool("isDying", true);
             mDying = true;
             yield return new WaitForSeconds(1f);
+            GameObject newBottle = Instantiate(bottlePrefab, transform.parent);
+            newBottle.transform.position = transform.position; 
             Destroy(gameObject);
         }
     }

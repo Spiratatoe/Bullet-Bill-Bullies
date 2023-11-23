@@ -5,6 +5,8 @@ using UnityEngine;
 public class ForkHit : MonoBehaviour
 {
 	// Start is called before the first frame update
+	private int damage;
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag == "Enemy")
@@ -12,5 +14,10 @@ public class ForkHit : MonoBehaviour
 			EnemyHP enemyHPComponent = collision.gameObject.GetComponent<EnemyHP>();
 			enemyHPComponent.TakeDamage((int)1);
 		}
+	}
+
+	public void IncrementDamage()
+	{
+		damage += 1;
 	}
 }

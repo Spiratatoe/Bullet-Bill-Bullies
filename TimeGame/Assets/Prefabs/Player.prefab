@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2497532978508478919}
   - component: {fileID: 2497532978508478936}
   - component: {fileID: 2497532978508478937}
+  - component: {fileID: 3030262473578161478}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -222,6 +223,18 @@ MonoBehaviour:
   stopTime: 3
   cooldown: 3
   timerText: {fileID: 0}
+--- !u!114 &3030262473578161478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2497532978508478926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e935edf820f54fb4c9b5c151272e95c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5905360607093753012
 GameObject:
   m_ObjectHideFlags: 0

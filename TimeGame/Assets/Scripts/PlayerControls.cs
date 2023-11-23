@@ -109,8 +109,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetButtonDown("Dash") && canDash && !mTakingDamage)
         {
             StartCoroutine(Dash());
-        }
-        
+        }   
 
     }
     
@@ -187,7 +186,6 @@ public class PlayerControls : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
 
     public void TakeDamage(int damage)
     {

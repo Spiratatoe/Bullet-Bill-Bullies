@@ -9,6 +9,7 @@ public class KnightBehaviour : MonoBehaviour
     [SerializeField] private Transform[] points; //array of transform points where the platform travels to
     private int i;  //index  of points array
 
+
     //Animation Variables
     private Animator mAnimator;
     private SpriteRenderer mSpriteRenderer;
