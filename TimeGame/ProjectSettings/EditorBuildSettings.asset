@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ca73207faecbe44fcb0dac0de43262b3
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MedievalLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Boss.unity
+    path: Assets/Scenes/MedievalBoss.unity
     guid: 63e60e322967d4604967112128955754
   m_configObjects: {}
