@@ -23,7 +23,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Info() {
-        InfoPanel.SetActive(true);
+        if (InfoPanel.activeSelf) { InfoPanel.SetActive(false); }
+        else { InfoPanel.SetActive(true); }
     }
 
     public void Exit() {
