@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator speakerPortraitAnimator;
     [SerializeField] private GameObject portraitFrame;
     [SerializeField] private GameObject speakerFrame;
+    [SerializeField] public bool isDialogueScene = false;
+    [SerializeField] public LevelLoader loader;
 
 
     private Story currentStory;
@@ -60,8 +62,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!playing)   //return if no dialogue playing
-        {
+        if (!playing)   // return if no dialogue playing
+        {   
+            if (isDialogueScene) { // if its a dialogue scene load next scene
+                loader.LoadNextLevel();
+            }
             return;
         }
 

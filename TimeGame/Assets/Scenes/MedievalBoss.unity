@@ -184,6 +184,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9815f92ec10ee647bbdba9465c9ad1a, type: 3}
+--- !u!114 &36496355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3265679625799529257, guid: d9815f92ec10ee647bbdba9465c9ad1a, type: 3}
+  m_PrefabInstance: {fileID: 36496354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c96c511043a0924d9d204a133a3e738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &435950471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,6 +4622,8 @@ MonoBehaviour:
   speakerPortraitAnimator: {fileID: 594060477}
   portraitFrame: {fileID: 594060478}
   speakerFrame: {fileID: 594060475}
+  isDialogueScene: 0
+  loader: {fileID: 36496355}
 --- !u!4 &622672944
 Transform:
   m_ObjectHideFlags: 0
