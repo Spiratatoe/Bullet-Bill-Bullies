@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private GameObject UIPanel;
+    [SerializeField] private GameObject InfoPanel;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -19,6 +20,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         PausePanel.SetActive(false);
         UIPanel.SetActive(true);
+    }
+
+    public void Info() {
+        InfoPanel.SetActive(true);
     }
 
     public void Exit() {
