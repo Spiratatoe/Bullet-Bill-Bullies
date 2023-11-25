@@ -36,9 +36,9 @@ public class EnemyHP : MonoBehaviour
             mAnimator.SetBool("isDying", true);
             mDying = true;
             yield return new WaitForSeconds(1f);
-            GameObject newBottle = Instantiate(bottlePrefab, transform.parent);
-            newBottle.transform.position = transform.position; 
-            Destroy(gameObject);
+            GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
+            newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f); 
+            Destroy(gameObject.transform.parent.gameObject);
         }
     }
 

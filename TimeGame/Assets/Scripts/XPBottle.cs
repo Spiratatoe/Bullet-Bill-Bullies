@@ -5,16 +5,17 @@ using UnityEngine;
 public class XPBottle : MonoBehaviour
 {
     [SerializeField] private float value;
+    private float originalY;
     // Start is called before the first frame update
     void Start()
     {
-        
+        originalY = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector2(transform.position.x, originalY - Mathf.Cos(Time.time * 4f) * 0.1f);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
