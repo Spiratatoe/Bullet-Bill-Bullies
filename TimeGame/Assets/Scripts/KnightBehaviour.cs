@@ -41,6 +41,7 @@ public class KnightBehaviour : MonoBehaviour
         }
         if (mWalking && !TimeStop.timeStopped && !mAnimator.GetBool("isDying"))
         {
+          
             float movingTo = (transform.position.x - points[i].position.x);
             mSpriteRenderer.flipX = (movingTo < 0) ? false : true;
             transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
@@ -60,11 +61,20 @@ public class KnightBehaviour : MonoBehaviour
     //do damage to the player if you touch them
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !TimeStop.timeStopped)
         {
-            PlayerControls playerComponent = collision.gameObject.GetComponent<PlayerControls>();
-            playerComponent.TakeDamage((int)1);
+            StartCoroutine(Attack(collision));
         }
+    }
+    
+    IEnumerator Attack(Collider2D collision)
+    {
+
+        mAnimator.SetBool("isAttacking", true);
+        PlayerControls playerComponent = collision.gameObject.GetComponent<PlayerControls>();
+        playerComponent.TakeDamage((int)1);
+        yield return new WaitForSeconds(0.3f);
+        mAnimator.SetBool("isAttacking", false);
     }
 
     private void OnDrawGizmos()

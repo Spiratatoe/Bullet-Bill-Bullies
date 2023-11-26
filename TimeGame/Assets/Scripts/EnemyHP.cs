@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-    [SerializeField] int hp, maxHP = 3;
+    [SerializeField] float hp, maxHP = 3;
     private Animator mAnimator;
-    private bool mDying = false;
-
+    [Header ("XP Components")]
+    [SerializeField] private float XPValue = 10;
     public GameObject bottlePrefab;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class EnemyHP : MonoBehaviour
         hp = maxHP;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         hp -= damage;
         mAnimator.SetBool("isTakingDamage", true);
@@ -34,10 +34,12 @@ public class EnemyHP : MonoBehaviour
         else
         {
             mAnimator.SetBool("isDying", true);
-            mDying = true;
             yield return new WaitForSeconds(1f);
+
+            //create an XP bottle
             GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
-            newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f); 
+            newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f);
+            newBottle.GetComponent<XPBottle>().value = XPValue; 
             Destroy(gameObject.transform.parent.gameObject);
         }
     }

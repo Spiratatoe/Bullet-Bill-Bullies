@@ -6,12 +6,15 @@ public class XPPlayer : MonoBehaviour
 {
     private float XP;
     private float level;
+    public ForkHit fork;
 
     // Start is called before the first frame update
     void Start()
     {
         level = 0;
         XP = 0;
+        
+        
     }
 
     // Update is called once per frame
@@ -24,12 +27,14 @@ public class XPPlayer : MonoBehaviour
     {
         XP += value;
         Debug.Log("Gained XP: " + value + " total: " + XP);
-        if (XP > 100)
+        if (XP >= 50)
         {
-            Debug.Log("LevelUp!");
+            level += 1;
+            fork.IncrementDamage();
+            XP = 0;
         }
+        
+
     }
-
-
 
 }

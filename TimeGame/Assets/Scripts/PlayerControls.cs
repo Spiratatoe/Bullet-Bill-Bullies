@@ -46,6 +46,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float mDashTime;
     [SerializeField] private float mDashCD;
 
+    private float yBoundary; 
+
     private void Start()
     {
         // Get references to other components and game objects
@@ -56,6 +58,16 @@ public class PlayerControls : MonoBehaviour
         hp = maxHP;
 
         healthText.text = ""+ hp;
+
+        GameObject oob = GameObject.Find("OutOfBounds");
+        if (oob != null)
+        {
+            yBoundary = oob.transform.position.y;
+        }
+        else
+        {
+            yBoundary = -10000;
+        }
     }
 
     private void Update()
@@ -68,7 +80,14 @@ public class PlayerControls : MonoBehaviour
                 return;
             }
         }
-            
+         
+        //Take damage if you fall out of bounds
+        if (transform.position.y <= yBoundary)
+        {
+            TakeDamage(5);
+        }
+
+
         if (isDashing){
             return;
         }

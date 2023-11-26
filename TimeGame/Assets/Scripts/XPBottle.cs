@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XPBottle : MonoBehaviour
 {
-    [SerializeField] private float value;
+    public float value;
     private float originalY;
     // Start is called before the first frame update
     void Start()

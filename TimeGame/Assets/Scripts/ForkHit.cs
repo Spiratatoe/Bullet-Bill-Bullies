@@ -5,19 +5,20 @@ using UnityEngine;
 public class ForkHit : MonoBehaviour
 {
 	// Start is called before the first frame update
-	private int damage;
+	private float damage = 1f;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag == "Enemy")
 		{
 			EnemyHP enemyHPComponent = collision.gameObject.GetComponent<EnemyHP>();
-			enemyHPComponent.TakeDamage((int)1);
+			enemyHPComponent.TakeDamage(damage);
 		}
 	}
 
 	public void IncrementDamage()
 	{
-		damage += 1;
+		damage += 0.5f;
+		Debug.Log("Damage: " + damage);
 	}
 }
