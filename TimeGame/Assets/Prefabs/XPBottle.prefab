@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4328043891401078275}
+  - component: {fileID: 4328043891401078272}
   - component: {fileID: 4328043891401078274}
   - component: {fileID: 4328043891401078273}
-  - component: {fileID: 4328043891401078272}
   m_Layer: 0
   m_Name: XPBottle
   m_TagString: Untagged
@@ -34,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4328043891401078272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328043891401078399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f19227aa54e7d140ad0e6fb13801565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 30
 --- !u!212 &4328043891401078274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -102,16 +115,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4328043891401078272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4328043891401078399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f19227aa54e7d140ad0e6fb13801565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 30
