@@ -544,6 +544,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5254282109327242912, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1802284403}
     - target: {fileID: 8760616807707619309, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: InfoPanel
       value: 
@@ -5000,6 +5004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 20
   maxHP: 20
+  XPValue: 10
   bottlePrefab: {fileID: 0}
 --- !u!114 &992259498
 MonoBehaviour:
@@ -7274,6 +7279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+--- !u!1 &1802284403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2497532978508478926, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+  m_PrefabInstance: {fileID: 1802284402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2698347363235812848
 PrefabInstance:
   m_ObjectHideFlags: 0
