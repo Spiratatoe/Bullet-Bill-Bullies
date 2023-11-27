@@ -8,11 +8,7 @@ public class ChickenBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!TimeStop.timeStopped)
-        {
-            transform.position += -transform.up * speed;
-        }
-        
+        transform.position += -transform.up * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
