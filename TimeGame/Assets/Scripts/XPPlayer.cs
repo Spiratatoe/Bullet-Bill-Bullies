@@ -31,6 +31,7 @@ public class XPPlayer : MonoBehaviour
         {
             level += 1;
             fork.IncrementDamage();
+            gameObject.GetComponent<PlayerControls>().AddMaxHP(1);
             XP = 0;
         }
         

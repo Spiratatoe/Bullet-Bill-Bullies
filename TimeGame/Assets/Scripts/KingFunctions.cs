@@ -18,17 +18,31 @@ public class KingFunctions : MonoBehaviour
     private float initialElapsed;
     private float toAttack;
     private int nbForks;
-    
+
+    private float animatorSpeed;    
+
     void Start()
     {
         mAnimator = GetComponent<Animator>();
         startTime = Time.time - 3.0f;
         initialTime = Time.time;
         nbForks = 0;
+        animatorSpeed = mAnimator.speed;
     }
 
     private void Update()
     {
+        //return if time is stopped
+        if (TimeStop.timeStopped)
+        {
+            mAnimator.speed = 0;
+            return;
+        }
+        else
+        {
+            mAnimator.speed = animatorSpeed;
+        }
+
         timeElapsed = Time.time - startTime;
         if(timeElapsed >= 3.0f)
         {
@@ -43,6 +57,7 @@ public class KingFunctions : MonoBehaviour
             mAnimator.SetFloat("RAGE", 1 );
         }
 
+        
 
 
 

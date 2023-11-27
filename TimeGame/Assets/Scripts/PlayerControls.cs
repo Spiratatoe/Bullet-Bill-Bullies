@@ -84,7 +84,7 @@ public class PlayerControls : MonoBehaviour
         //Take damage if you fall out of bounds
         if (transform.position.y <= yBoundary)
         {
-            TakeDamage(5);
+            TakeDamage(100);
         }
 
 
@@ -220,6 +220,13 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("You would have died");
         }
 
+    }
+
+    public void AddMaxHP(int toAdd)
+    {
+        maxHP += toAdd;
+        hp += toAdd;
+        healthText.text = "" + hp;
     }
 
     private IEnumerator Dash()

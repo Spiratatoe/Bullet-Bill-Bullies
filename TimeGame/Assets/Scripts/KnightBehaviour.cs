@@ -15,6 +15,8 @@ public class KnightBehaviour : MonoBehaviour
     private SpriteRenderer mSpriteRenderer;
     private bool mWalking = true;
 
+    private float animatorSpeed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +25,24 @@ public class KnightBehaviour : MonoBehaviour
         mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
         mWalking = true;
         i = 0;
+        animatorSpeed = mAnimator.speed;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        //return if time is stopped
+        if (TimeStop.timeStopped)
+        {
+            mAnimator.speed = 0;
+            return;
+        }
+        else
+        {
+            mAnimator.speed = animatorSpeed;
+        }
+
         //This movement is similar to the moving platform might need to change later on
         if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
@@ -39,7 +53,7 @@ public class KnightBehaviour : MonoBehaviour
                 StartCoroutine(StandStill());
             }
         }
-        if (mWalking && !TimeStop.timeStopped && !mAnimator.GetBool("isDying"))
+        if (mWalking && !mAnimator.GetBool("isDying"))
         {
           
             float movingTo = (transform.position.x - points[i].position.x);
@@ -48,7 +62,6 @@ public class KnightBehaviour : MonoBehaviour
         }
 
         mAnimator.SetBool("isWalking", mWalking);
-        mAnimator.SetBool("isTimeStopped", TimeStop.timeStopped);
 
     }
     private IEnumerator StandStill()

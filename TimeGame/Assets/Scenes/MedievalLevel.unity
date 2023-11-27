@@ -36806,6 +36806,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164352850823329888, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 164352850823329888, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 164352851722726948, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: m_Camera
       value: 
