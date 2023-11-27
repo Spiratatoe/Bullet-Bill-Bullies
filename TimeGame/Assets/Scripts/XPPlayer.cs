@@ -4,38 +4,33 @@ using UnityEngine;
 
 public class XPPlayer : MonoBehaviour
 {
-    private float XP;
-    private float level;
     public ForkHit fork;
+
+    private int XP_max = 75;
+    private float XP;
+    private int level;
+
+    public float XPValue { get => XP; set => XP = value; }
+    public int Level { get => level; set => level = value; }
+    public int XPMax { get => XP_max; set => XP_max = value; }
 
     // Start is called before the first frame update
     void Start()
     {
         level = 0;
         XP = 0;
-        
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void AddXP(float value)
     {
         XP += value;
         Debug.Log("Gained XP: " + value + " total: " + XP);
-        if (XP >= 50)
+        if (XP >= XP_max)
         {
             level += 1;
-            fork.IncrementDamage();
-            gameObject.GetComponent<PlayerControls>().AddMaxHP(1);
+            // fork.IncrementDamage();
+            // gameObject.GetComponent<PlayerControls>().AddMaxHP(1);
             XP = 0;
         }
-        
-
     }
-
 }
