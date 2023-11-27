@@ -28,9 +28,8 @@ public class XPPlayer : MonoBehaviour
         if (XP >= XP_max)
         {
             level += 1;
-            // fork.IncrementDamage();
-            // gameObject.GetComponent<PlayerControls>().AddMaxHP(1);
             XP = 0;
+            GameObject.Find("GameUI").GetComponent<LevelUpMenu>().LevelUp();
         }
     }
 }
