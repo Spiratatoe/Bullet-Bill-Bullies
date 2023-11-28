@@ -251,6 +251,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &143459497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1615599815373328830, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+  m_PrefabInstance: {fileID: 6358400501712037808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &170103132 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 951282946, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
@@ -443,8 +454,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.000010967255, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1663,6 +1674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1615599815798618861, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 1788673226628652351, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
       propertyPath: speed
       value: 3
@@ -37494,6 +37509,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1615599815798618861, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 6333985081753105803, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
+      propertyPath: bar_fill
+      value: 
+      objectReference: {fileID: 143459497}
     - target: {fileID: 8953186680397045131, guid: bd5ab71bf75b60740ad7864b3db6dcc7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.022
