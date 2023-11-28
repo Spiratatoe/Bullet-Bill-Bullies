@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class EnemyHP : MonoBehaviour
     [Header ("XP Components")]
     [SerializeField] private float XPValue = 10;
     public GameObject bottlePrefab;
+
+    public Boolean isInvincible = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +21,32 @@ public class EnemyHP : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        hp -= damage;
-        mAnimator.SetBool("isTakingDamage", true);
-        StartCoroutine(TookDamage());
+        if (isInvincible == false)
+        {
+            hp -= damage;
+            mAnimator.SetBool("isTakingDamage", true);
+            StartCoroutine(TookDamage());
+        }
+    }
+
+    public Boolean getPercentage()
+    {
+        //returns if the enemy hp is below 60%
+        if (hp < 0.4 * maxHP)
+        {
+            return true;
+        }
+
+        return false;
+    }
+    public void toggleInvincibleOn()
+    {
+        isInvincible = true;
+    }
+
+    public void toggleInvincibleOff()
+    {
+        isInvincible = false;
     }
 
     private IEnumerator TookDamage()
@@ -28,6 +54,9 @@ public class EnemyHP : MonoBehaviour
 
         if (hp > 0) //check if hase died
         {
+            if (isInvincible) //set it faster for king
+            { mAnimator.SetBool("isTakingDamage", false);
+            }
             yield return new WaitForSeconds(1f);
             mAnimator.SetBool("isTakingDamage", false);
         }
@@ -37,10 +66,10 @@ public class EnemyHP : MonoBehaviour
             yield return new WaitForSeconds(1f);
 
             //create an XP bottle
-            GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
-            newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f);
-            newBottle.GetComponent<XPBottle>().value = XPValue; 
-            Destroy(gameObject.transform.parent.gameObject);
+            // GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
+            // newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f);
+            // newBottle.GetComponent<XPBottle>().value = XPValue; 
+            // Destroy(gameObject.transform.parent.gameObject);
         }
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ChickenBehaviour : MonoBehaviour
 {
-    private float speed = 0.02f;
+    private float speed = 0.03f;
     [SerializeField] private int damageAmount;
 
     // Update is called once per frame
