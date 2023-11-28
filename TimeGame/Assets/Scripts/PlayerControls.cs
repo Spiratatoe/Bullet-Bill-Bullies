@@ -73,7 +73,8 @@ public class PlayerControls : MonoBehaviour
     private void Update()
     {
         //freezer the player if dialogue is happening
-        if (DialogueManager.GetInstance().playing)
+        
+        if (GameObject.Find("DialogueManager") != null && DialogueManager.GetInstance().playing)
         {
             return;
         }
