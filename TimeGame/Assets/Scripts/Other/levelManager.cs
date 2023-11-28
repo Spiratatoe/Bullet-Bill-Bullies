@@ -10,9 +10,11 @@ public class levelManager : MonoBehaviour
     public List<GameObject> asteroidPrefab;
     public float spawnInterval = 0.2f;
     private Camera mainCamera;
+    public GameObject player; 
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         mainCamera = Camera.main;
         StartCoroutine(SpawnAsteroids());
     }
@@ -21,7 +23,15 @@ public class levelManager : MonoBehaviour
     {
         while (true)
         {
-            SpawnAsteroid();
+
+            // because the asteroids are spawned withtin the camera view frame, asteroids can be spawned in cases where
+            // the ceiling is far above the camera y fieldview. So, to prevent this, I specified the x positions where 
+            // the asteroids can spawn 
+            float playerPositionX = player.transform.position.x;
+            if (playerPositionX < 21f || (playerPositionX > 26.4f && playerPositionX < 31.6f) || playerPositionX > 47.5f)
+            {
+                SpawnAsteroid();
+            }
             yield return new WaitForSeconds(spawnInterval);
         }
     }
