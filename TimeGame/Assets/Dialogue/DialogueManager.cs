@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Dash"))
+        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Attack"))
         {
             ContinueStory();
         }

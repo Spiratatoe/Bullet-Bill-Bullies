@@ -73,14 +73,11 @@ public class PlayerControls : MonoBehaviour
     private void Update()
     {
         //freezer the player if dialogue is happening
-        if (TryGetComponent<DialogueManager>(out DialogueManager manager) )
+        if (DialogueManager.GetInstance().playing)
         {
-            if (DialogueManager.GetInstance().playing)
-            {
-                return;
-            }
+            return;
         }
-         
+
         //Take damage if you fall out of bounds
         if (transform.position.y <= yBoundary)
         {

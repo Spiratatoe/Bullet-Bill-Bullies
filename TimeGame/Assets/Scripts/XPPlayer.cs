@@ -24,7 +24,6 @@ public class XPPlayer : MonoBehaviour
     public void AddXP(float value)
     {
         XP += value;
-        Debug.Log("Gained XP: " + value + " total: " + XP);
         if (XP >= XP_max)
         {
             level += 1;
