@@ -1,6 +1,6 @@
 -> intro_end_scene
 === intro_end_scene ===
-Suzy and the cat are teleported to what doesn't seem to be like a specific period of time, well ... it doesn't seem to be a place either. It's pitch black besides a giant glowing being. #speaker:Description
+Suzy and the ca are teleported to what does seem to be like a specific period of time, well ... it doesn't seem to be a place either. It's pitch black besides a giant glowing being. #speaker:Description
 Woah ... where are we ? #speaker:Suzy
 This is before and after everything. This is before time and space even began. #speaker:Cat
 Hello Suzy ... your a long way from home.  #speaker:Time God
