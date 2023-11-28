@@ -28,7 +28,8 @@ public class levelManager : MonoBehaviour
             // the ceiling is far above the camera y fieldview. So, to prevent this, I specified the x positions where 
             // the asteroids can spawn 
             float playerPositionX = player.transform.position.x;
-            if (playerPositionX < 21f || (playerPositionX > 26.4f && playerPositionX < 31.6f) || playerPositionX > 47.5f)
+            float playerPositionY = player.transform.position.y;
+            if (playerPositionX < 21f || (playerPositionX > 26.4f && playerPositionX < 31.6f) || playerPositionX > 47.5f || playerPositionY >= 3)
             {
                 SpawnAsteroid();
             }
