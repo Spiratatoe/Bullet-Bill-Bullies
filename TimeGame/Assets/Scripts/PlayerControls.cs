@@ -211,6 +211,7 @@ public class PlayerControls : MonoBehaviour
         if (mAttacking || mTakingDamage || isDashing) return; //cant take damage while hitting or if just took or if dashing
         mTakingDamage = true;
         hp -= damage;
+        if (hp <= 0) { hp = 0; }
         healthText.text = "" + hp;
         mAnimator.SetBool("isTakingDamage", mTakingDamage);
 
