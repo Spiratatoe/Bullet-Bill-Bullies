@@ -7,6 +7,7 @@ public class DialogueController : MonoBehaviour
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset dialogueInkJSON;
+    
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class DialogueController : MonoBehaviour
     }
     void Update()
     {
+        
         if (dialogueInkJSON != null)
         {
             if (!DialogueManager.GetInstance().done)

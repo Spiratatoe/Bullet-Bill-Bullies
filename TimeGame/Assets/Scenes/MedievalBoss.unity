@@ -5030,6 +5030,7 @@ MonoBehaviour:
   low_hp_colour:
     serializedVersion: 2
     rgba: 0
+  isDead: 0
 --- !u!114 &992259498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,7 +5079,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 1718951585}
+  script2: {fileID: 1096951087}
   king: {fileID: 992259491}
+  DialogueMan: {fileID: 622672942}
 --- !u!4 &1079011072
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5096,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1096951087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096951089}
+  - component: {fileID: 1096951088}
+  m_Layer: 0
+  m_Name: DialogueLoaderEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1096951088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096951087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f093a38b3ccdae14e8efaac7f2a6da32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueInkJSON: {fileID: 4900000, guid: 22100bd46d7f7416dad5a3f6da3565c1, type: 3}
+--- !u!4 &1096951089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096951087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47340742, y: -0.42294073, z: -1.5764971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136254806
 GameObject:
@@ -5325,6 +5373,7 @@ MonoBehaviour:
   low_hp_colour:
     serializedVersion: 2
     rgba: 0
+  isDead: 0
 --- !u!70 &1344277783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

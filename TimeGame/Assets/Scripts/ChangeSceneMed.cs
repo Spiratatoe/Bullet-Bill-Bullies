@@ -6,21 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneMed : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("does this collide");
-        SceneManager.LoadScene("MedievalBoss");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("does this collide");
+            SceneManager.LoadScene("MedievalBoss");
+        }
+        
         
     }
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("does this collide exit");
-        //SceneManager.LoadScene("MedievalBoss");
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("it do be staying");
-    }
+    
 }

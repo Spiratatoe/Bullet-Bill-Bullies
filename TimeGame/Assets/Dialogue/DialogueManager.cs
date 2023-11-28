@@ -86,6 +86,11 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    public void Reload()
+    {
+        done = false;
+    }
+
     private void ExitDialogueMode()
     {
         playing = false;

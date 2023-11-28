@@ -20,6 +20,7 @@ public class EnemyHP : MonoBehaviour
     public Color32 high_hp_colour;
     public Color32 half_hp_colour;
     public Color32 low_hp_colour;
+    public Boolean isDead = false;
 
     void Start()
     {
@@ -88,6 +89,7 @@ public class EnemyHP : MonoBehaviour
         else
         {
             mAnimator.SetBool("isDying", true);
+            isDead = true;
             yield return new WaitForSeconds(1f);
 
             //create an XP bottle
