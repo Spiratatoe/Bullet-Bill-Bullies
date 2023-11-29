@@ -495,6 +495,11 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &566421450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5959563261581885743, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+  m_PrefabInstance: {fileID: 164352852750990565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628414663
 GameObject:
   m_ObjectHideFlags: 0
@@ -37407,6 +37412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2497532978508478915, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: deathPanel
+      value: 
+      objectReference: {fileID: 566421450}
     - target: {fileID: 2497532978508478915, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: healthText
       value: 
