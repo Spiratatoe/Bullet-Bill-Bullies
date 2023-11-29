@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     Color32 cat_colour;
     Color32 description_colour;
     Color32 king_boss_colour;
+    Color32 time_god_colour;
+
     private void Awake()
     {
         if (instance != null)
@@ -56,8 +58,8 @@ public class DialogueManager : MonoBehaviour
         suzy_colour = new Color32(69,190,141,255); // RGBA
         cat_colour = new Color32(255,173,0,255); // RGBA
         description_colour = new Color32(255,255,255,255); // RGBA
-
         king_boss_colour = new Color32(255,0,51,255); // RGBA
+        time_god_colour = new Color32(186, 104, 200, 255); // RGBA
     }
 
     private void Update()
@@ -131,7 +133,7 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER:
-                    if ((tagValue) == "Cat" || (tagValue) == "Suzy" || (tagValue) == "King") { 
+                    if ((tagValue) == "Cat" || (tagValue) == "Suzy" || (tagValue) == "King" || (tagValue) == "TimeGod") { 
                         speakerNameText.text = tagValue;
                         portraitFrame.SetActive(true);
                         speakerFrame.SetActive(true);
@@ -147,9 +149,13 @@ public class DialogueManager : MonoBehaviour
                             dialogeText.color = suzy_colour; 
                             speakerNameText.color = suzy_colour;    
                         }
-                        else {
+                        else if ((tagValue) == "King") {
                             dialogeText.color = king_boss_colour; 
                             speakerNameText.color = king_boss_colour; 
+                        }
+                        else {
+                            dialogeText.color = time_god_colour; 
+                            speakerNameText.color = time_god_colour; 
                         }
                     }
 
