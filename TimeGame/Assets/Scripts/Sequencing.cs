@@ -14,7 +14,7 @@ public class Sequencing : MonoBehaviour
     //when boss dies, start newest sequence of dialogue
     
     public GameObject script;
-    public GameObject script2;
+    
     //public GameObject scriptManager; 
     public GameObject king;
     public GameObject DialogueMan; 
@@ -23,8 +23,11 @@ public class Sequencing : MonoBehaviour
     private float startTime;
     private float currentTime;
     private float timeElapsed;
+    private float Timer;
     private bool doOnlyOnce = true;
     private bool doOnlyOnce2 = true;
+    private bool doOnlyOnce3 = true;
+    public GameObject script2;
     void Start()
     {
         startTime = Time.time;
@@ -50,10 +53,21 @@ public class Sequencing : MonoBehaviour
 
             if (king.GetComponent<EnemyHP>().isDead && doOnlyOnce2)
             {
-                DialogueMan.GetComponent<DialogueManager>().Reload();
-                script2.SetActive (true);
-                doOnlyOnce2 = false;
-                //also spawn in the teleporter
+                if (doOnlyOnce3)
+                {
+                    Timer = Time.time;
+                    doOnlyOnce3 = false;
+                }
+                
+                if (currentTime - Timer > 4.0f)
+                {
+                    script2.SetActive (true);
+                    DialogueMan.GetComponent<DialogueManager>().Reload();
+                    doOnlyOnce2 = false;
+                    //also spawn in the teleporter
+                }
+                
+                
             }
             
         }

@@ -20,6 +20,7 @@ public class KingFunctions : MonoBehaviour
     private float toAttack;
     private int nbForks;
     private List<GameObject> spawnedObstacles = new List<GameObject>();
+    
 
     //used for time stop ability 
     private float animatorSpeed;
@@ -85,6 +86,7 @@ public class KingFunctions : MonoBehaviour
         
         //used when we want the animator to stop and just have a still image of dead king
         deadKing.SetActive(true);
+        //script2.SetActive (true);
     
         gameObject.SetActive(false);
     }
