@@ -139,7 +139,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1966597197, guid: bd38aa8c84204c449ba81d3033a48279, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,8 +164,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1311428, y: -0.5039687}
-  m_Size: {x: 0.4508649, y: 0.91408086}
+  m_Offset: {x: 0.019215584, y: -0.69819534}
+  m_Size: {x: 0.42452908, y: 0.5519633}
   m_Direction: 0
 --- !u!95 &1003592843615399313
 Animator:
@@ -257,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 1003592844550755926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.39, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1003592843615399316}
