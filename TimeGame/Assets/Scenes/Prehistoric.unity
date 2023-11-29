@@ -428,6 +428,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2497532978508478915, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497532978508478915, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: deathPanel
+      value: 
+      objectReference: {fileID: 732190489}
+    - target: {fileID: 2497532978508478915, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1607804152}
@@ -11043,6 +11051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c985f6dd89a514f9dce609e4ba4fe8, type: 3}
+--- !u!1 &732190489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5959563261581885743, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+  m_PrefabInstance: {fileID: 1607804151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &964270039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14882,6 +14895,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1122949350}
+    - target: {fileID: 5959563261581885743, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8760616807707619309, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: InfoPanel
       value: 

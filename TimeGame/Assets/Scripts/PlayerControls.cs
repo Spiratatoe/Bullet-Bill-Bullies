@@ -18,6 +18,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private Transform forkPoint;
 
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private GameObject deathPanel;
+
     private float kGroundCheckRadius = 0.1f;
     [Range(0, .3f)] [SerializeField] private float mMovementSmoothing = .05f;
     private Vector3 mVelocity = Vector3.zero; //target for smoothings
@@ -29,6 +31,7 @@ public class PlayerControls : MonoBehaviour
     private bool mFalling;
     private bool mAttacking;
     private bool mTakingDamage;
+    private bool mDead;
 
     // References to Player's components
     private Animator mAnimator;
@@ -57,8 +60,11 @@ public class PlayerControls : MonoBehaviour
 
         hp = maxHP;
 
+        // UI initialization
         healthText.text = ""+ hp;
+        deathPanel.SetActive(false);
 
+        //find the lower bound of the map
         GameObject oob = GameObject.Find("OutOfBounds");
         if (oob != null)
         {
@@ -72,17 +78,14 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        // check if player died
-        if (hp <= 0) 
+        if (hp <= 0 && !mTakingDamage)
         {
-            // let death animation play and then
-            Time.timeScale = 0;
-            // activate pannel
-
+            StartCoroutine(Die());
+            mDead = true;
         }
 
-        // freezer the player if dialogue is happening
-        if (GameObject.Find("DialogueManager") != null && DialogueManager.GetInstance().playing)
+        // freezer the player if dialogue is happening OR if dead
+        if ((GameObject.Find("DialogueManager") != null && DialogueManager.GetInstance().playing) || mDead)
         {
             return;
         }
@@ -92,6 +95,8 @@ public class PlayerControls : MonoBehaviour
         {
             TakeDamage(100);
         }
+
+        
 
 
         if (isDashing){
@@ -272,6 +277,16 @@ public class PlayerControls : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mTakingDamage = false;
         mAnimator.SetBool("isTakingDamage", false);
+
+    }
+
+    private IEnumerator Die()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        mAnimator.SetBool("isDying", true);
+        yield return new WaitForSeconds(1f);
+        deathPanel.SetActive(true);
+        
     }
 
     private void OnDrawGizmos()
