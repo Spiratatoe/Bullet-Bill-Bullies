@@ -15,7 +15,7 @@ C:/Users/afafa/OneDrive/Documents/GitHub/Bullet-Bill-Bullies/TimeGame
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61728
+61880
 Successfully changed project path to: C:/Users/afafa/OneDrive/Documents/GitHub/Bullet-Bill-Bullies/TimeGame
 C:/Users/afafa/OneDrive/Documents/GitHub/Bullet-Bill-Bullies/TimeGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/afafa/OneDrive/Documents/GitHub/Bullet-Bill-Bullies/TimeGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22668] Host "[IP] 192.168.2.61 [Port] 0 [Flags] 2 [Guid] 3410104216 [EditorId] 3410104216 [Version] 1048832 [Id] WindowsEditor(7,Bert) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17156] Host "[IP] 192.168.2.61 [Port] 0 [Flags] 2 [Guid] 2785696599 [EditorId] 2785696599 [Version] 1048832 [Id] WindowsEditor(7,Bert) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [22668] Host "[IP] 192.168.2.61 [Port] 0 [Flags] 2 [Guid] 3410104216 [EditorId] 3410104216 [Version] 1048832 [Id] WindowsEditor(7,Bert) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17156] Host "[IP] 192.168.2.61 [Port] 0 [Flags] 2 [Guid] 2785696599 [EditorId] 2785696599 [Version] 1048832 [Id] WindowsEditor(7,Bert) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 63.15 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 68.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,146 +67,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002611 seconds.
+Registered in 0.003120 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 63.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 69.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.531 seconds
+- Completed reload, in  0.534 seconds
 Domain Reload Profiling:
-	ReloadAssembly (531ms)
-		BeginReloadAssembly (59ms)
+	ReloadAssembly (534ms)
+		BeginReloadAssembly (65ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (399ms)
-			LoadAssemblies (58ms)
+		EndReloadAssembly (391ms)
+			LoadAssemblies (64ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (80ms)
+			SetupTypeCache (87ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (252ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (64ms)
+				RefreshPlugins (70ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (132ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
+				ProcessInitializeOnLoadAttributes (119ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004236 seconds.
+Registered in 0.003908 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\afafa\OneDrive\Documents\GitHub\Bullet-Bill-Bullies\TimeGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\afafa\OneDrive\Documents\GitHub\Bullet-Bill-Bullies\TimeGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.53 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 74.56 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.861 seconds
+- Completed reload, in  1.002 seconds
 Domain Reload Profiling:
-	ReloadAssembly (862ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (1002ms)
+		BeginReloadAssembly (100ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (688ms)
-			LoadAssemblies (68ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (814ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (182ms)
+			SetupTypeCache (220ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (361ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (416ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (63ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (184ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3891 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (56.7 KB). Loaded Objects now: 4354.
-Memory consumption went from 149.5 MB to 149.5 MB.
-Total: 2.925900 ms (FindLiveObjects: 0.262500 ms CreateObjectMapping: 0.094900 ms MarkObjects: 2.478100 ms  DeleteObjects: 0.089600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003612 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\afafa\OneDrive\Documents\GitHub\Bullet-Bill-Bullies\TimeGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\afafa\OneDrive\Documents\GitHub\Bullet-Bill-Bullies\TimeGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Domain Reload Profiling:
-	ReloadAssembly (860ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (666ms)
-			LoadAssemblies (69ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (203ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (300ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (59ms)
-				ProcessInitializeOnLoadAttributes (192ms)
+				RefreshPlugins (75ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (220ms)
 				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.13 ms, found 4 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3867 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (24.6 KB). Loaded Objects now: 4357.
-Memory consumption went from 147.0 MB to 147.0 MB.
-Total: 2.569200 ms (FindLiveObjects: 0.310700 ms CreateObjectMapping: 0.102600 ms MarkObjects: 2.130400 ms  DeleteObjects: 0.024500 ms)
+Unloading 3891 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (56.7 KB). Loaded Objects now: 4354.
+Memory consumption went from 149.5 MB to 149.5 MB.
+Total: 3.501800 ms (FindLiveObjects: 0.281200 ms CreateObjectMapping: 0.128700 ms MarkObjects: 3.015000 ms  DeleteObjects: 0.075900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -219,3 +162,99 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 755667.754665 seconds.
+  path: Assets/Pre_Tiles/Platforms_0.asset
+  artifactKey: Guid(5a35865da003db1429ebb0b9de6c5aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Platforms_0.asset using Guid(5a35865da003db1429ebb0b9de6c5aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e165fcd5e1a52e94673f7ab854de1060') in 0.054610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.124421 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_2.asset
+  artifactKey: Guid(cef9fe69f06ecda4e939c0a7c7586452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_2.asset using Guid(cef9fe69f06ecda4e939c0a7c7586452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9ce1709e2e3a32565b18b3e8f1e0c8') in 0.012887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_6.asset
+  artifactKey: Guid(9fd2edcb405be40448428761df28b039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_6.asset using Guid(9fd2edcb405be40448428761df28b039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5cf922b78836a3aea242202a08a0337') in 0.009232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_20.asset
+  artifactKey: Guid(9897e166f552aca4491bd2b893ef34fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_20.asset using Guid(9897e166f552aca4491bd2b893ef34fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e66c7f35faab045e9e254af07036ad4') in 0.010845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_13.asset
+  artifactKey: Guid(64456f50104837c4b8262f0f4ab560a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_13.asset using Guid(64456f50104837c4b8262f0f4ab560a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e54db77459951036698d86e44e1a71f2') in 0.009548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_18.asset
+  artifactKey: Guid(84688a16aa5a2a0488049953e8f14bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_18.asset using Guid(84688a16aa5a2a0488049953e8f14bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07444dfb7dc65c1c0e775f5d09f19799') in 0.009599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_5.asset
+  artifactKey: Guid(13c54a8662cee2b49962d7bdaa0466d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_5.asset using Guid(13c54a8662cee2b49962d7bdaa0466d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f6ff26647b51a83a4a3af67a3ee47f0') in 0.010534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_14.asset
+  artifactKey: Guid(1a05ce8826cf1cd4eb7105282c290a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_14.asset using Guid(1a05ce8826cf1cd4eb7105282c290a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a051fb31c2ee8e64ec9d6f5551f940d') in 0.010766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_26.asset
+  artifactKey: Guid(78d456793eae9ae409ecdd2796728bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_26.asset using Guid(78d456793eae9ae409ecdd2796728bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84628b5795a4c73ff991b5771acb77c') in 0.009634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_12.asset
+  artifactKey: Guid(fd27326e50250834fb6748b3e65bd45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_12.asset using Guid(fd27326e50250834fb6748b3e65bd45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98b35f76c41ba4870941e8e7ad730f07') in 0.011188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_8.asset
+  artifactKey: Guid(5b350b8424f3044458825b726f8c643e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_8.asset using Guid(5b350b8424f3044458825b726f8c643e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961108b656d774fec9966316a590ea15') in 0.010132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_9.asset
+  artifactKey: Guid(f22fb5b02340e904f9aaa7cde4164256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_9.asset using Guid(f22fb5b02340e904f9aaa7cde4164256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a133a88b755adfd6e595699c485de251') in 0.009709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_21.asset
+  artifactKey: Guid(10abf4a4878bb7f4d9c57b86ef915830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_21.asset using Guid(10abf4a4878bb7f4d9c57b86ef915830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e04698a3d4e2971f1f6f4e0b0db6a91d') in 0.011337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_24.asset
+  artifactKey: Guid(c59c22dfe999bc949867696786355243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_24.asset using Guid(c59c22dfe999bc949867696786355243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b3a3391b4491897b8430350142d369') in 0.010057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Pre_Tiles/Tileset-Spritesheet_25.asset
+  artifactKey: Guid(47a41f731e68dcd428e46a371787bdac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pre_Tiles/Tileset-Spritesheet_25.asset using Guid(47a41f731e68dcd428e46a371787bdac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf658836171cfde0063551f8b64808e') in 0.009989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.811698 seconds.
+  path: Assets/Spritesheets/pre_sheets/Tileset-Spritesheet.png
+  artifactKey: Guid(6dc097c7985cc91459d3d0dabae322d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spritesheets/pre_sheets/Tileset-Spritesheet.png using Guid(6dc097c7985cc91459d3d0dabae322d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a0fe6124fd5c5e31e423abf598737f') in 0.102666 seconds 
