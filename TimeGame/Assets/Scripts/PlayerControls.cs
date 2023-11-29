@@ -10,7 +10,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float mWalkSpeed;
     [SerializeField] private float mRunSpeed;
     [SerializeField] private float mJumpForce;
-    [SerializeField] int hp, maxHP = 5;
+    [SerializeField] static int hp, maxHP = 5;
 
     [Header("Game components")]
     [SerializeField] private LayerMask mWhatIsGround;

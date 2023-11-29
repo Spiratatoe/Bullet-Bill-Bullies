@@ -5,7 +5,7 @@ using UnityEngine;
 public class ForkHit : MonoBehaviour
 {
 	// Start is called before the first frame update
-	private float damage = 1f;
+	private static float damage = 1f;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
