@@ -72,8 +72,16 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        //freezer the player if dialogue is happening
-        
+        // check if player died
+        if (hp <= 0) 
+        {
+            // let death animation play and then
+            Time.timeScale = 0;
+            // activate pannel
+
+        }
+
+        // freezer the player if dialogue is happening
         if (GameObject.Find("DialogueManager") != null && DialogueManager.GetInstance().playing)
         {
             return;
