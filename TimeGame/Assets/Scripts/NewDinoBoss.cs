@@ -41,6 +41,12 @@ public class NewDinoBoss : MonoBehaviour
     private Vector2 targetPos;
     private Vector2 originalPos;
 
+    //for scripts
+    public GameObject manager;
+    public GameObject script1;
+    public GameObject script2;
+    public GameObject portal; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,6 +139,15 @@ public class NewDinoBoss : MonoBehaviour
         //script2.SetActive (true);
 
         gameObject.SetActive(false);
+
+         script1.SetActive(false);
+        script2.SetActive(true);
+        manager.GetComponent<DialogueManager>().Reload();
+
+        portal.SetActive(true);
+
+
+      //  script2.SetActive(true);
     }
 
     public void introDone()
@@ -186,6 +201,8 @@ public class NewDinoBoss : MonoBehaviour
 
 
     }
+
+  
 
 
 }
