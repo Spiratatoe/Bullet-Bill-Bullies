@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class XPPlayer : MonoBehaviour
 {
-    public ForkHit fork;
 
     private int XP_max = 75;
     private float XP;

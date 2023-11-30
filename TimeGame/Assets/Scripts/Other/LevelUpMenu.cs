@@ -6,6 +6,7 @@ public class LevelUpMenu : MonoBehaviour
 {
     [SerializeField] private GameObject UIPanel;
     [SerializeField] private GameObject LevelUpPanel;
+    public ForkHit fork;
 
     public void LevelUp() {
         Time.timeScale = 0;
@@ -21,7 +22,7 @@ public class LevelUpMenu : MonoBehaviour
     }
 
     public void AddDamage() {
-        Debug.Log("ADD DAMAGE BOOST");
+        fork.IncrementDamage();
         Time.timeScale = 1;
         LevelUpPanel.SetActive(false);
         UIPanel.SetActive(true);

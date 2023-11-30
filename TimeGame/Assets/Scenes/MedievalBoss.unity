@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1802284403}
+    - target: {fileID: 5656764783702029419, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: fork
+      value: 
+      objectReference: {fileID: 1802284404}
     - target: {fileID: 8760616807707619309, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: InfoPanel
       value: 
@@ -4840,7 +4844,6 @@ MonoBehaviour:
   forkR: {fileID: 8891417915318950176, guid: 9101952476fa7479c8fefed9a95c2235, type: 3}
   deadKing: {fileID: 1344277780}
   player: {fileID: 614487216}
-  script2: {fileID: 1096951087}
   intro: 0
 --- !u!1 &1079011070
 GameObject:
@@ -4874,6 +4877,7 @@ MonoBehaviour:
   script: {fileID: 1718951585}
   king: {fileID: 992259491}
   DialogueMan: {fileID: 622672942}
+  script2: {fileID: 0}
 --- !u!4 &1079011072
 Transform:
   m_ObjectHideFlags: 0
@@ -5205,7 +5209,6 @@ MonoBehaviour:
   forkR: {fileID: 8891417915318950176, guid: 9101952476fa7479c8fefed9a95c2235, type: 3}
   deadKing: {fileID: 0}
   player: {fileID: 614487216}
-  script2: {fileID: 0}
   intro: 0
 --- !u!114 &1344277782
 MonoBehaviour:
@@ -7614,3 +7617,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2497532978508478926, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
   m_PrefabInstance: {fileID: 1802284402}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802284404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 951282946, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+  m_PrefabInstance: {fileID: 1802284402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fe1f0ddeb0be74db45a971b488c728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

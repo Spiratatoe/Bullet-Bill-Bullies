@@ -615,7 +615,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -15301,6 +15301,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1122949350}
+    - target: {fileID: 5656764783702029419, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
+      propertyPath: fork
+      value: 
+      objectReference: {fileID: 2083216701}
     - target: {fileID: 5959563261581885743, guid: e15629b0f52cc524c99fb9bc2bb85e69, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -26390,6 +26394,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083216701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 951282946, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+  m_PrefabInstance: {fileID: 287562415}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fe1f0ddeb0be74db45a971b488c728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118796837
 GameObject:
   m_ObjectHideFlags: 0
