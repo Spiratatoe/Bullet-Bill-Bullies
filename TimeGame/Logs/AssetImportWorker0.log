@@ -771,3 +771,9 @@ Received Import Request.
   path: Assets/Scenes/Medieval.unity
   artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Medieval.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef53d55c4c5e9be66a47f414ebc080d2') in 0.004016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 197.481709 seconds.
+  path: Assets/Scenes/MedievalBoss.unity
+  artifactKey: Guid(63e60e322967d4604967112128955754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MedievalBoss.unity using Guid(63e60e322967d4604967112128955754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c39ef99c8204a5456f0a30cc81372fd') in 0.001764 seconds 
