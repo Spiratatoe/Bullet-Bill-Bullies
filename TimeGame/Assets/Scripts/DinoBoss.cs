@@ -156,7 +156,7 @@ public class DinoBoss : MonoBehaviour
         mAnimator.SetBool("rollAttack", true);
 
 
-        Vector3 targetosition = new Vector3(transform.position.x + rollDistance, transform.position.y, transform.position.z);
+        Vector3 targetPosition = new Vector3(transform.position.x + rollDistance, transform.position.y, transform.position.z);
 
         // recording time so that the rolling attack / animation stays until the distance is covered 
         float startTime = Time.time;
