@@ -31,7 +31,7 @@ public class NewDinoBoss : MonoBehaviour
     private float animatorSpeed;
 
     //so we know when intro is done to start combat
-    public bool intro = true;
+    public bool intro = false;
 
     //variable to idicate what its doing
     private bool attacking = false;
