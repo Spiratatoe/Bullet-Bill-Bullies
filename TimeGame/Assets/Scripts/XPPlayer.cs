@@ -5,20 +5,13 @@ using UnityEngine;
 public class XPPlayer : MonoBehaviour
 {
 
-    private int XP_max = 75;
-    private float XP;
-    private int level;
+    private static int XP_max = 75;
+    private static float XP = 0;
+    private static int level = 0;
 
     public float XPValue { get => XP; set => XP = value; }
     public int Level { get => level; set => level = value; }
     public int XPMax { get => XP_max; set => XP_max = value; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        level = 0;
-        XP = 0;
-    }
 
     public void AddXP(float value)
     {
