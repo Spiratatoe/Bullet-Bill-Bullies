@@ -33,10 +33,13 @@ public class KingFunctions : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         nbForks = 0;
         animatorSpeed = mAnimator.speed;
+        FindObjectOfType<AudioManager>().Play("Boss");
+        
     }
 
     private void Update()
     {
+       
         //return if time is stopped
         if (TimeStop.timeStopped)
         {
@@ -76,6 +79,11 @@ public class KingFunctions : MonoBehaviour
         
     }
 
+    public void kingCry()
+    {
+        FindObjectOfType<AudioManager>().Play("cry");
+    }
+
     public void replaceKing()
     {
         //destroy the forks
@@ -87,7 +95,7 @@ public class KingFunctions : MonoBehaviour
         //used when we want the animator to stop and just have a still image of dead king
         deadKing.SetActive(true);
         //script2.SetActive (true);
-    
+        FindObjectOfType<AudioManager>().Stop("Boss");
         gameObject.SetActive(false);
     }
     public void chickenThrown()
