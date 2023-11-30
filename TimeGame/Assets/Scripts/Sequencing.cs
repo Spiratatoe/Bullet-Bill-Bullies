@@ -17,7 +17,8 @@ public class Sequencing : MonoBehaviour
     
     //public GameObject scriptManager; 
     public GameObject king;
-    public GameObject DialogueMan; 
+    public GameObject DialogueMan;
+    public GameObject Portal;
 
 
     private float startTime;
@@ -27,7 +28,7 @@ public class Sequencing : MonoBehaviour
     private bool doOnlyOnce = true;
     private bool doOnlyOnce2 = true;
     private bool doOnlyOnce3 = true;
-    public GameObject script2;
+    //public GameObject script2;
     void Start()
     {
         startTime = Time.time;
@@ -61,10 +62,11 @@ public class Sequencing : MonoBehaviour
                 
                 if (currentTime - Timer > 4.0f)
                 {
-                    script2.SetActive (true);
+                    //script2.SetActive (true);
                     DialogueMan.GetComponent<DialogueManager>().Reload();
                     doOnlyOnce2 = false;
                     //also spawn in the teleporter
+                    Portal.SetActive(true);
                 }
                 
                 

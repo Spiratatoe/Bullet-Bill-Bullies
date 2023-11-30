@@ -1,12 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
-public class ChangeSceneMed : MonoBehaviour
+public class ChangeScenePre : MonoBehaviour
 {
     
     public GameObject canvas;
@@ -19,7 +16,7 @@ public class ChangeSceneMed : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.Q))
         {
             Debug.Log("does this collide");
-            SceneManager.LoadScene("MedievalBoss");
+            SceneManager.LoadScene("IntroPrehistoricScene");
         }
         
         
