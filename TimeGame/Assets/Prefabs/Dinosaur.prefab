@@ -73,8 +73,6 @@ GameObject:
   - component: {fileID: 1003592843615399316}
   - component: {fileID: 1003592843615399315}
   - component: {fileID: 1003592843615399312}
-  - component: {fileID: 6789266339513784401}
-  - component: {fileID: 3238298899763329061}
   - component: {fileID: 1003592843615399313}
   - component: {fileID: 1003592843615399318}
   - component: {fileID: 1003592843615399319}
@@ -164,54 +162,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.44021866, y: -0.8184058}
-  m_Size: {x: 0.58897173, y: 0.1374237}
-  m_Direction: 1
---- !u!61 &6789266339513784401
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003592843615399317}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.46227622, y: -0.4514121}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.76763654, y: 0.3084169}
-  m_EdgeRadius: 0
---- !u!58 &3238298899763329061
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003592843615399317}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7168102}
-  serializedVersion: 2
-  m_Radius: 0.28318974
+  m_Offset: {x: 0.019215584, y: -0.69819534}
+  m_Size: {x: 0.42452908, y: 0.5519633}
+  m_Direction: 0
 --- !u!95 &1003592843615399313
 Animator:
   serializedVersion: 5
@@ -261,7 +217,6 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   isDead: 0
-  isBoss: 0
   tickSpawner: {fileID: 7464910154784749926}
 --- !u!114 &1003592843615399319
 MonoBehaviour:
