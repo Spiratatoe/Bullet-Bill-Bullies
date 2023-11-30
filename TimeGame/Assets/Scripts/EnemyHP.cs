@@ -22,6 +22,15 @@ public class EnemyHP : MonoBehaviour
     public Color32 low_hp_colour;
     public Boolean isDead = false;
 
+    [Header ("Damage Ticks")]
+    [SerializeField] private TickSpawner tickSpawner;
+
+    public float HP
+    {
+        get { return hp; }
+        set { hp = value; }
+    }
+
     void Start()
     {
         mAnimator = GetComponent<Animator>();
@@ -50,6 +59,7 @@ public class EnemyHP : MonoBehaviour
         if (isInvincible == false)
         {
             hp -= damage;
+            if (damage > 0 ) { tickSpawner.SpawnMessage(damage.ToString()); }
             mAnimator.SetBool("isTakingDamage", true);
             StartCoroutine(TookDamage());
         }

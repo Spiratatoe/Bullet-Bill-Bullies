@@ -4787,6 +4787,7 @@ GameObject:
   - component: {fileID: 992259496}
   - component: {fileID: 992259497}
   - component: {fileID: 992259498}
+  - component: {fileID: 992259499}
   m_Layer: 7
   m_Name: King
   m_TagString: Enemy
@@ -4928,6 +4929,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   isDead: 0
+  tickSpawner: {fileID: 992259499}
 --- !u!114 &992259498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4946,6 +4948,20 @@ MonoBehaviour:
   deadKing: {fileID: 1344277780}
   player: {fileID: 614487216}
   intro: 0
+--- !u!114 &992259499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992259491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76eadcf6aecc43f4b93431a362b43d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0.65}
+  messagePrefab: {fileID: 8433285315214708730, guid: 29951775ed7264304aadba4db038ed9d, type: 3}
 --- !u!1 &1079011070
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,11 +5216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -917.274
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5339,6 +5355,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   isDead: 0
+  tickSpawner: {fileID: 0}
 --- !u!70 &1344277783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

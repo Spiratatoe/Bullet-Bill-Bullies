@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4911739447312278120}
   - component: {fileID: 6333985081753105803}
   - component: {fileID: 1788673226628652351}
+  - component: {fileID: 6108502330921873204}
   m_Layer: 7
   m_Name: EnemyComponents
   m_TagString: Enemy
@@ -185,6 +186,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   isDead: 0
+  tickSpawner: {fileID: 6108502330921873204}
 --- !u!114 &1788673226628652351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +203,20 @@ MonoBehaviour:
   points:
   - {fileID: 8953186680380559706}
   - {fileID: 8953186680413626754}
+--- !u!114 &6108502330921873204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953186680397045132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76eadcf6aecc43f4b93431a362b43d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  messagePrefab: {fileID: 8433285315214708730, guid: 29951775ed7264304aadba4db038ed9d, type: 3}
 --- !u!1 &8953186680413626755
 GameObject:
   m_ObjectHideFlags: 0
