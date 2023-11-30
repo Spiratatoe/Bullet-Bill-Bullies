@@ -169,6 +169,15 @@ public class PlayerControls : MonoBehaviour
         return mGrounded;
     }
 
+    public void playWalkSound()
+    {
+        FindObjectOfType<AudioManager>().Play("walk");
+    }
+
+    public void playAttackSound()
+    {
+        FindObjectOfType<AudioManager>().Play("attack");
+    }
     private void MoveCharacter()
     {
 

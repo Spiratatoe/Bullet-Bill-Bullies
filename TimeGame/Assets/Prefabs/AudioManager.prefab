@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1635127375100963936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635127375100963938}
+  - component: {fileID: 1635127375100963939}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635127375100963938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635127375100963936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.32745, y: 2.7028842, z: 1.3558422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1635127375100963939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635127375100963936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cd1f28c494d4ef6a0c0df819c55c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: a142d81d78d104920a785421252bfd71, type: 3}
+    name: Boss
+    volume: 0.862
+    pitch: 1
+    doesLoop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 9d4b0983209ee4bf98a09a3735c1605c, type: 3}
+    name: cry
+    volume: 0
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 2cf8b8bea58974efc96473ffd795c5e3, type: 3}
+    name: walk
+    volume: 0
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 5a3207e67fe934bc9aab26b8bd4326a2, type: 3}
+    name: attack
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
