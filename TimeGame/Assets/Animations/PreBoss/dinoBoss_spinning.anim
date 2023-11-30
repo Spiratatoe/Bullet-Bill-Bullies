@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dinoBoss_tailAttack
+  m_Name: dinoBoss_spinning
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,15 +22,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -39,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6666667
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -51,21 +42,19 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: TailHit
+    path: RollAttack
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -1255260021, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
+      value: {fileID: -596360063, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
+    - time: 0.16666667
+      value: {fileID: 675371093, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
     - time: 0.33333334
-      value: {fileID: 1627540856, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - time: 0.45
-      value: {fileID: -1118990999, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - time: 0.5833333
-      value: {fileID: -1099182360, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - time: 0.75
-      value: {fileID: -1255260021, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
+      value: {fileID: -771490034, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
+    - time: 0.5
+      value: {fileID: -596360063, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -78,7 +67,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4048693777
+      path: 3880610493
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -92,22 +81,21 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -1255260021, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - {fileID: 1627540856, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - {fileID: -1118990999, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - {fileID: -1099182360, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
-    - {fileID: -1255260021, guid: 4e8079e9b8ea6eb4bb17e95cebf9ec58, type: 3}
+    - {fileID: -596360063, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
+    - {fileID: 675371093, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
+    - {fileID: -771490034, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
+    - {fileID: -596360063, guid: e57c66e6a35b02548a5e86a8cedb0865, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.76666665
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -123,15 +111,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -140,7 +119,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6666667
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -152,7 +131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: TailHit
+    path: RollAttack
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
