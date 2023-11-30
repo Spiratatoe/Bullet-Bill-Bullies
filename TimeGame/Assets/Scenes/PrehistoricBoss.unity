@@ -989,6 +989,7 @@ GameObject:
   - component: {fileID: 479932245}
   - component: {fileID: 479932244}
   - component: {fileID: 479932243}
+  - component: {fileID: 479932248}
   m_Layer: 7
   m_Name: DeadDinoBoss
   m_TagString: Enemy
@@ -1055,7 +1056,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11763024, y: -0.49666142}
@@ -1129,6 +1130,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &479932248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479932242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3199823b7712e049b9f0be4ab9c6ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeRain: {fileID: 6128618062619158099, guid: f80fcd315c3233544b50795b62f99360, type: 3}
+  deadDino: {fileID: 1996835802}
+  player: {fileID: 1634558277}
+  attackRange: 5
+  tailAttackRange: 3
+  throwSpikesCooldown: 3
+  intro: 1
 --- !u!1 &570946755
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,6 +4701,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1922239072}
+    - target: {fileID: 2497532978508478919, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2497532978508478926, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4694,6 +4718,11 @@ PrefabInstance:
 --- !u!1 &1634558269 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2497532978508478926, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+  m_PrefabInstance: {fileID: 1634558268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1634558277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2497532978508478913, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
   m_PrefabInstance: {fileID: 1634558268}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1779867983
@@ -6268,6 +6297,7 @@ GameObject:
   - component: {fileID: 1996835805}
   - component: {fileID: 1996835806}
   - component: {fileID: 1996835807}
+  - component: {fileID: 1996835808}
   m_Layer: 7
   m_Name: DinoBoss
   m_TagString: Enemy
@@ -6353,7 +6383,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11763024, y: -0.49666142}
@@ -6408,3 +6438,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1996835808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996835802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3199823b7712e049b9f0be4ab9c6ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeRain: {fileID: 6128618062619158099, guid: f80fcd315c3233544b50795b62f99360, type: 3}
+  deadDino: {fileID: 479932242}
+  player: {fileID: 1634558277}
+  attackRange: 5
+  tailAttackRange: 3
+  throwSpikesCooldown: 3
+  intro: 1
