@@ -41,3 +41,7 @@ ehthumbs.db
 Thumbs.db
 TimeGame/.vscode/settings.json
 TimeGame/.vsconfig
+*.log
+*.log
+*.log
+TimeGame/Logs/AssetImportWorker0-prev.log
