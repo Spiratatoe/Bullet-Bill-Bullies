@@ -21,6 +21,7 @@ public class EnemyHP : MonoBehaviour
     public Color32 half_hp_colour;
     public Color32 low_hp_colour;
     public Boolean isDead = false;
+    public bool isBoss;
 
     [Header ("Damage Ticks")]
     [SerializeField] private TickSpawner tickSpawner;
@@ -102,11 +103,15 @@ public class EnemyHP : MonoBehaviour
             isDead = true;
             yield return new WaitForSeconds(1.5f);
 
-            //create an XP bottle
-            GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
-            newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f);
-            newBottle.GetComponent<XPBottle>().value = XPValue; 
-            Destroy(gameObject.transform.parent.gameObject);
+            if (!isBoss)
+            {
+                //create an XP bottle
+                GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent); 
+                newBottle.transform.position = new Vector2 (transform.position.x, transform.position.y - 0.2f);
+                newBottle.GetComponent<XPBottle>().value = XPValue; 
+                Destroy(gameObject.transform.parent.gameObject);
+            }
+            
         }
     }
 

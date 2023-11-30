@@ -95,6 +95,11 @@ public class DialogueManager : MonoBehaviour
         done = false;
     }
 
+    public void Deload()
+    {
+        done = true;
+    }
+
     private void ExitDialogueMode()
     {
         playing = false;

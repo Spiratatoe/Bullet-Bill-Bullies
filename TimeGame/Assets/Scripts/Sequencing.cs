@@ -28,10 +28,15 @@ public class Sequencing : MonoBehaviour
     private bool doOnlyOnce = true;
     private bool doOnlyOnce2 = true;
     private bool doOnlyOnce3 = true;
+
+    private bool doOnlyOnce4 = true;
+
+    private bool doOnlyOnce5 = true;
     //public GameObject script2;
     void Start()
     {
         startTime = Time.time;
+        DialogueMan.GetComponent<DialogueManager>().Deload();
     }
 
     void Update()
@@ -39,7 +44,7 @@ public class Sequencing : MonoBehaviour
         // KingFunctions.GetInstance().chicken;
         currentTime = Time.time;
         timeElapsed = currentTime - startTime;
-        if (DialogueManager.GetInstance().done)
+        if (!doOnlyOnce4)
         {
             //no need to continue setting the values
             if (doOnlyOnce)
@@ -85,9 +90,18 @@ public class Sequencing : MonoBehaviour
             }
             else
             {
-                // we should still not be able to hit king + no fight can start 
+                if (doOnlyOnce5)
+                {
+                    DialogueMan.GetComponent<DialogueManager>().Reload();
+                    doOnlyOnce5 = false;
+                }
+                
                 king.GetComponent<EnemyHP>().toggleInvincibleOn();
                 script.SetActive (true);
+                if (DialogueManager.GetInstance().done)
+                {
+                    doOnlyOnce4 = false;
+                }
             }
         }
         
