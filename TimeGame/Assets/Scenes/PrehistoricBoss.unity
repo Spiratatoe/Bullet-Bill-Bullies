@@ -4836,9 +4836,13 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1922239072}
+    - target: {fileID: 2497532978508478918, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a0cad0b565724f643a24668c57c7e5d3, type: 2}
     - target: {fileID: 2497532978508478919, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2497532978508478926, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: m_Name
@@ -6234,11 +6238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5013227736964034010, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6275,6 +6279,10 @@ PrefabInstance:
     - target: {fileID: 5013227736964034011, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013227737061675273, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5013227737061675276, guid: 2147c6118dbb04061afc58d4d2a1e6db, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6514,7 +6522,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 2
   m_Sprite: {fileID: 511984174, guid: f408beb92ab4bdf4385ec21cab4bceed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
