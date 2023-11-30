@@ -49,7 +49,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float mDashTime;
     [SerializeField] private float mDashCD;
 
-    private float yBoundary; 
+    private float yBoundary;
+    private static bool firstLoad = true;
 
     private void Start()
     {
@@ -57,8 +58,13 @@ public class PlayerControls : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         mSpriteRenderer = transform.GetComponent<SpriteRenderer>();
-
-        hp = maxHP;
+        
+        //having this heals the player every new scene
+        if (firstLoad)
+        {
+            hp = maxHP;
+            firstLoad = false;
+        }
 
         // UI initialization
         healthText.text = ""+ hp;
