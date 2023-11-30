@@ -180,6 +180,10 @@ public class PlayerControls : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("walk");
     }
 
+    public void playPlayerDeath()
+    {
+        FindObjectOfType<AudioManager>().Play("deathPlayer");
+    }
     public void playAttackSound()
     {
         FindObjectOfType<AudioManager>().Play("attack");
