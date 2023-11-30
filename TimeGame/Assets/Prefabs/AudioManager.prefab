@@ -93,3 +93,15 @@ MonoBehaviour:
     pitch: 1
     doesLoop: 0
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8cb26f4f2e0224c1a8ebfc475984d809, type: 3}
+    name: knightsword
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b846626b4755d4514b8a3d03c729305a, type: 3}
+    name: deathEnemy
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}

@@ -74,6 +74,11 @@ public class KnightBehaviour : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("knightsword");
     }
+
+    public void playDeath()
+    {
+        FindObjectOfType<AudioManager>().Play("deathEnemy");
+    }
     private IEnumerator StandStill()
     {
         mWalking = false;
