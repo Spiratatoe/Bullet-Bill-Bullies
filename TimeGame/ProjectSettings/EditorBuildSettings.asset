@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroPrehistoricScene.unity
     guid: d12a74525dfda4614b820a5db06f32e3
+  - enabled: 1
+    path: Assets/Scenes/Prehistoric.unity
+    guid: 6b300c6a59562b74caff4715b681f3b1
+  - enabled: 1
+    path: Assets/Scenes/PrehistoricBoss.unity
+    guid: 9463443c25206c14c9d75bf227afa36b
+  - enabled: 1
+    path: Assets/Scenes/TimeGodScene.unity
+    guid: cd684a4c3a1534c8e972b53d503dd157
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 3fc195105ea9b456ba86b2e2d5b3d68e
   m_configObjects: {}
