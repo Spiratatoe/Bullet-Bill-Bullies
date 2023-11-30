@@ -60,11 +60,13 @@ public class DialogueManager : MonoBehaviour
         description_colour = new Color32(255,255,255,255); // RGBA
         king_boss_colour = new Color32(255,0,51,255); // RGBA
         time_god_colour = new Color32(186, 104, 200, 255); // RGBA
+
+        
     }
 
     private void Update()
     {
-        if (!playing)   // return if no dialogue playing
+        if (done)   // return if no dialogue playing
         {   
             if (isDialogueScene) { // if its a dialogue scene load next scene
                 loader.LoadNextLevel();

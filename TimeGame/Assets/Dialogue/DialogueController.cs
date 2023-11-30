@@ -11,11 +11,19 @@ public class DialogueController : MonoBehaviour
 
     void Start()
     {
-        
+        if (dialogueInkJSON != null)
+        {
+            if (!DialogueManager.GetInstance().done)
+            {
+                if (!DialogueManager.GetInstance().playing)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogueInkJSON);
+                }
+            }
+        }
     }
     void Update()
     {
-        
         if (dialogueInkJSON != null)
         {
             if (!DialogueManager.GetInstance().done)
