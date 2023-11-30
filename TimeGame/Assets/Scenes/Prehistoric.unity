@@ -558,6 +558,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1607804152}
+    - target: {fileID: 2497532978508478918, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a0cad0b565724f643a24668c57c7e5d3, type: 2}
     - target: {fileID: 2497532978508478919, guid: 94863d0caefb2364fad3753c5ade03c0, type: 3}
       propertyPath: m_SortingOrder
       value: 3
