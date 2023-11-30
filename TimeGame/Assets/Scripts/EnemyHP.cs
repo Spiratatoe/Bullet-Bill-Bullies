@@ -90,7 +90,7 @@ public class EnemyHP : MonoBehaviour
         {
             mAnimator.SetBool("isDying", true);
             isDead = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
 
             //create an XP bottle
             GameObject newBottle = Instantiate(bottlePrefab, transform.parent.parent);
