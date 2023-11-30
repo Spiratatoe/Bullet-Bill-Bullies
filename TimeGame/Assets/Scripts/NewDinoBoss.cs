@@ -135,6 +135,8 @@ public class NewDinoBoss : MonoBehaviour
     public void replaceDino()
     {
         //used when we want the animator to stop and just have a still image of dead king
+
+        spikeRain.SetActive(false);
         deadDino.SetActive(true);
         //script2.SetActive (true);
 
