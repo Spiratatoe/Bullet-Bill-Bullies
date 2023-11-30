@@ -426,7 +426,27 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
+      propertyPath: sounds.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8cb26f4f2e0224c1a8ebfc475984d809, type: 3}
+    - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: knightsword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
       propertyPath: sounds.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635127375100963939, guid: e6bc05957efff4e31984f70e28821bf9, type: 3}
+      propertyPath: sounds.Array.data[8].volume
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
