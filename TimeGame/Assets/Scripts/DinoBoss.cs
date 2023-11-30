@@ -22,7 +22,8 @@ public class DinoBoss : MonoBehaviour
     private List<GameObject> spawnedObstacles = new List<GameObject>();
 
 
-
+    float rollSpeed = 5.0f; 
+    float rollDistance = -1.5f; 
     public float attackRange = 5f;
     public float tailAttackRange = 3f;
     public float throwSpikesCooldown = 3f;
@@ -45,6 +46,12 @@ public class DinoBoss : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    // when player is behind boss - TAIL ATTACK 
+    // when player is at a certain distance away from boss (in the left direction ) roll attack towards the left 
+    // when the player is just around , throw spikes (rain attack) 
+
+
     void Update()
     {
         //return if time is stopped
@@ -68,24 +75,31 @@ public class DinoBoss : MonoBehaviour
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            if (distanceToPlayer > attackRange)
+
+            if (player.position.x <= -6f)
             {
-                Idle();
+                rollAttack();
             }
+
+
+          //  if (distanceToPlayer > attackRange)
+          //  {
+          //     // Idle();
+         //   }
             else
             {
                 if (Time.time > nextThrowTime)
                 {
-                    ThrowSpikes();
+                    throwSpikes();
                     nextThrowTime = Time.time + throwSpikesCooldown;
                 }
-                else if (distanceToPlayer < tailAttackRange && IsPlayerBehind())
+                else if (isPlayerBehind())
                 {
-                    TailAttack();
+                    tailAttack();
                 }
                 else
                 {
-                    Attack();
+                    idle();
                 }
             }
         }
@@ -105,19 +119,6 @@ public class DinoBoss : MonoBehaviour
     }
 
 
-   
-
-
-
-    void SpikeThrowingAttack()
-    {
-        // Implement spike throwing logic
-        // For example, instantiate the spikeRain prefab
-        Instantiate(spikeRain, new Vector3(player.position.x + 4.0f, -2.5f, 16.985f), Quaternion.identity);
-    }
-
-
-
 
   
 
@@ -128,51 +129,76 @@ public class DinoBoss : MonoBehaviour
     }
 
 
-    bool IsPlayerBehind()
+    bool isPlayerBehind()
     {
         Vector3 toPlayer = player.position - transform.position;
         float angle = Vector3.Angle(transform.forward, toPlayer);
         return Mathf.Abs(angle) > 90f;
     }
 
-    void Idle()
+    void idle()
     {
-        // Set animation bools
-        mAnimator.SetBool("isIdle", true);
+        
+        mAnimator.SetBool("isIdle", false);
         mAnimator.SetBool("rollAttack", false);
         mAnimator.SetBool("tailAttack", false);
+        mAnimator.SetBool("throwSpikes", false);
     }
 
-    void Attack()
+
+
+    IEnumerator rollAttack()
     {
-        // Set animation bools
+        
         mAnimator.SetBool("isIdle", false);
         mAnimator.SetBool("rollAttack", true);
         mAnimator.SetBool("tailAttack", false);
+        mAnimator.SetBool("rollAttack", true);
+
+
+        Vector3 targetosition = new Vector3(transform.position.x + rollDistance, transform.position.y, transform.position.z);
+
+        // recording time so that the rolling attack / animation stays until the distance is covered 
+        float startTime = Time.time;
+
+        while (Time.time < startTime + Mathf.Abs(rollDistance) / rollSpeed)
+        {
+            transform.Translate(Vector3.left * rollSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        // Move back to the original position
+        while (transform.position.x < targetPosition.x)
+        {
+            transform.Translate(Vector3.right * rollSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+     
     }
 
-    void TailAttack()
+    void tailAttack()
     {
-        // Set animation bools
+       
         mAnimator.SetBool("isIdle", false);
         mAnimator.SetBool("throwSpikes", false);
         mAnimator.SetBool("tailAttack", true);
+        mAnimator.SetBool("rollAttack", false);
     }
 
-    void ThrowSpikes()
+    void throwSpikes()
     {
-        // Set animation bools
         mAnimator.SetBool("isIdle", false);
-        mAnimator.SetBool("throwSpikes", true); // You can use the same attack animation for throwing spikes
+        mAnimator.SetBool("throwSpikes", true); 
         mAnimator.SetBool("tailAttack", false);
+        mAnimator.SetBool("rollAttack", false);
 
-        // Logic to throw spikes at player's initial position
+    
 
         Vector3 playerPosition = player.position;
         Instantiate(spikeRain, new Vector3(playerPosition.x + 4.0f, -2.5f, 16.985f), Quaternion.identity);
 
-        // Implement your logic for throwing spikes at player's initial position
-        // Instantiate spikes, apply force, etc.
+     
     }
 
 
