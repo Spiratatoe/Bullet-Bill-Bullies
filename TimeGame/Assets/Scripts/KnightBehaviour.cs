@@ -64,6 +64,11 @@ public class KnightBehaviour : MonoBehaviour
         mAnimator.SetBool("isWalking", mWalking);
 
     }
+
+    public void playBite()
+    {
+        FindObjectOfType<AudioManager>().Play("dinobite");
+    }
     private IEnumerator StandStill()
     {
         mWalking = false;

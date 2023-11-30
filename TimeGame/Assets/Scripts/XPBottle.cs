@@ -22,6 +22,7 @@ public class XPBottle : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.GetComponent<XPPlayer>().AddXP(value);
+            FindObjectOfType<AudioManager>().Play("pickup");
             Destroy(gameObject);
         }
     }

@@ -32,8 +32,10 @@ public class TimeStop : MonoBehaviour
         //Update booleans
         canStop = false;
         timeStopped = true;
-
-
+        
+        //play sound
+        FindObjectOfType<AudioManager>().Play("timestop");
+        
         //for (int i=0; i < bodies.Length; i++)
         //{
         //    bodies[i].constraints = RigidbodyConstraints2D.FreezeAll;

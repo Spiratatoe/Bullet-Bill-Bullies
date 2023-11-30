@@ -75,3 +75,21 @@ MonoBehaviour:
     pitch: 1
     doesLoop: 0
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: efb38c56fc2684c88841efd231797841, type: 3}
+    name: pickup
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: cbd6ddd5ad61c4b3fb7399cb09454e7a, type: 3}
+    name: timestop
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: dca0b69649551482bab88334e0d8c5d2, type: 3}
+    name: dinobite
+    volume: 1
+    pitch: 1
+    doesLoop: 0
+    source: {fileID: 0}
