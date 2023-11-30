@@ -10,6 +10,7 @@ public class LevelUpMenu : MonoBehaviour
 
     public void LevelUp() {
         Time.timeScale = 0;
+        FindObjectOfType<AudioManager>().Play("levelup");
         LevelUpPanel.SetActive(true);
         UIPanel.SetActive(false);
     }
