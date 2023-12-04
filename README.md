@@ -2,6 +2,7 @@
 Game Dev Team Project 
 
 Developpers :
+
 Jack Spiratos
 
 Afaf Alanzarouti
@@ -10,6 +11,11 @@ Gabrielle Guidote
 
 Nicolas Moscato-Barbeau
 
+
+
+
+
+**Description**
 
 
 
