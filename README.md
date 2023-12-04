@@ -46,6 +46,26 @@ We play as Suzy, an everyday girl, who accidentally follows a time cat and is no
 
 
 
+**Disclaimer!**
+
+Music and Sounds are not our own :
+
+sound effects were collected from: https://freesound.org/
+
+Soundtracks come from:
+
+game name - song title - where in our game
+
+Pokemon Ruby Sapphire - Littleroot Town - Dialogue intro scenes 
+The Legend of Zelda: Majora's Mask - Song of Healing - End scene 
+Rascal - Castle Hackalott (castle past) - Medival Level 
+Rascal - Medieval Boss Fight - Medieval Boss
+Donkey Kong Country Returns - DK Island Swing Returns - Prehistoric Level
+Donkey Kong Country Returns - Mugly's Mound - Prehistoric Boss 
+
+
+
+
 
 
 
