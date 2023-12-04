@@ -28,7 +28,7 @@ We play as Suzy, an everyday girl, who accidentally follows a time cat and is no
 
 <img width="751" alt="Screenshot 2023-12-03 at 9 11 36 PM" src="https://github.com/Spiratatoe/Bullet-Bill-Bullies/assets/95253269/9115c83b-59f3-4f05-b903-03e231fb6f3b">
 
-**A finish off a period of time by defeating the evil Boss within**
+**And finish off a period of time by defeating the evil Boss within**
 
 <img width="751" alt="Screenshot 2023-12-03 at 9 11 55 PM" src="https://github.com/Spiratatoe/Bullet-Bill-Bullies/assets/95253269/85d3c685-2d7a-4575-9533-debc95555c31">
 
