@@ -1,6 +1,13 @@
 # Bullet-Bill-Bullies
 Game Dev Team Project 
 
+Developpers :
+Jack Spiratos
+Afaf Alanzarouti
+Gabrielle Guidote
+Nicolas Moscato-Barbeau
+
+
 
 Back In Time is a thrilling PC game of the Metroidvania / Platformer genre , offering players a captivating journey through the corridors of time. Set in pixelated landscapes, the game unfolds across four distinct eras: Present-day, Medieval Times, the Prehistoric Age, and the enigmatic Pre-Time period. The Medieval Level and Stone Age stages introduce unique challenges, each with its own set of obstacles that players must navigate.
 With a linear progression system, time-manipulating obstacles, and retro visuals, this game promises an exhilarating adventure where the consequences of time travel unravel before your eyes.
